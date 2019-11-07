@@ -58,7 +58,7 @@ public class Logica  {
             e.printStackTrace();
             return null;
         }
-        return null;
+        return listaCorreos;
     }
 
 

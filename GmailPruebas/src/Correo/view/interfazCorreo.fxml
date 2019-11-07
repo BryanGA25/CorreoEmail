@@ -5,62 +5,33 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-
 <?import javafx.scene.control.cell.PropertyValueFactory?>
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="873.0"
-         tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-         fx:controller="Correo.view.interfazCorreoController">
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="1030.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Correo.view.interfazCorreoController">
   <tabs>
     <Tab text="Untitled Tab 1">
          <content>
-            <SplitPane dividerPositions="0.25666666666666665" prefHeight="160.0" prefWidth="200.0">
+            <SplitPane dividerPositions="0.17525773195876287" prefHeight="160.0" prefWidth="200.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="130.0" />
                   <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
                     <items>
                         <TableView fx:id="tablaCorreos" prefHeight="200.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn prefWidth="336.0" text="Asunto">
-                              <cellValueFactory><PropertyValueFactory property="asunto"/></cellValueFactory>
+                            <TableColumn prefWidth="225.0" text="Asunto">
+                              <cellValueFactory><PropertyValueFactory property="asunto" /></cellValueFactory>
                             </TableColumn>
-                            <TableColumn prefWidth="344.0" text="Remitente">
-                              <cellValueFactory><PropertyValueFactory property="remitente"/></cellValueFactory>
+                            <TableColumn prefWidth="379.0" text="Remitente">
+                              <cellValueFactory><PropertyValueFactory property="remitente" /></cellValueFactory>
                             </TableColumn>
+                              <TableColumn prefWidth="240.0" text="Fecha">
+                              <cellValueFactory><PropertyValueFactory property="fecha"/></cellValueFactory>
+                              </TableColumn>
                           </columns>
                         </TableView>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
-                    </items>
-                  </SplitPane>
-              </items>
-            </SplitPane>
-         </content></Tab>
-    <Tab text="Untitled Tab 2">
-         <content>
-            <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-              </items>
-            </SplitPane>
-         </content>
-         <content>
-            <SplitPane dividerPositions="0.267260579064588" prefHeight="160.0" prefWidth="200.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-                  <SplitPane dividerPositions="0.6193415637860082" orientation="VERTICAL" prefHeight="535.0" prefWidth="649.0">
-                    <items>
-                        <TableView fx:id="tablaCorreos2" prefHeight="200.0" prefWidth="200.0">
-                            <columns>
-                                <TableColumn prefWidth="336.0" text="Asunto">
-                                    <cellValueFactory><PropertyValueFactory property="asunto" /></cellValueFactory>
-                                </TableColumn>
-                                <TableColumn prefWidth="344.0" text="Remitente">
-                                    <cellValueFactory><PropertyValueFactory property="remitente" /></cellValueFactory>
-                                </TableColumn>
-                            </columns>
-                        </TableView>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                        <WebView fx:id="vistaEmail" prefHeight="200.0" prefWidth="200.0" />
                     </items>
                   </SplitPane>
               </items>

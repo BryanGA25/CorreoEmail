@@ -22,14 +22,14 @@ public class interfazCorreoController implements Initializable {
 
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
-                listaCorreos= new Logica().getInstance().getListaCorreos();
+
                 cargarTabla();
 
 
         }
 
         private void cargarTabla() {
-
+                listaCorreos= new Logica().getInstance().getListaCorreos();
                 tablaCorreos.setItems(listaCorreos);
 
         }
