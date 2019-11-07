@@ -24,6 +24,8 @@ public class leerGmail {
         public void read() {
 
             Properties props = new Properties();
+            props.put("mail.imap.ssl.checkserveridentity", "false");
+            props.put ("mail.imaps.ssl.trust", "*");
 
             try {
 
