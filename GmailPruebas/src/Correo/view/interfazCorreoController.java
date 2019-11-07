@@ -1,14 +1,36 @@
 package Correo.view;
 
+import Correo.logica.Logica;
 import Correo.model.EmailsMensage;
 
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableView;
 
-public class interfazCorreoController {
+import javax.mail.Message;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-        private ObservableList<EmailsMensage> mensajes;
+public class interfazCorreoController implements Initializable {
+
+        ObservableList<EmailsMensage> listaCorreos;
+
+        @FXML
+        private TableView<EmailsMensage> tablaCorreos;
 
 
+        @Override
+        public void initialize(URL url, ResourceBundle resourceBundle) {
+                listaCorreos= new Logica().getInstance().getListaCorreos();
+                cargarTabla();
 
 
+        }
+
+        private void cargarTabla() {
+
+                tablaCorreos.setItems(listaCorreos);
+
+        }
 }

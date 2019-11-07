@@ -20,6 +20,14 @@ public class Logica  {
         listaCorreos = FXCollections.observableArrayList();
     }
 
+
+    public static Logica getInstance() {
+        if(INSTANCE == null){
+            INSTANCE = new Logica();
+        }
+        return INSTANCE;
+    }
+
     public ObservableList<EmailsMensage> getListaCorreos(){
 
         Properties props = new Properties();

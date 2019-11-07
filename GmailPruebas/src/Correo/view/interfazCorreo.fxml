@@ -7,19 +7,25 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="954.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Correo.view.interfazCorreoController">
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="873.0"
+         tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Correo.view.interfazCorreoController">
   <tabs>
     <Tab text="Untitled Tab 1">
          <content>
             <SplitPane dividerPositions="0.25666666666666665" prefHeight="160.0" prefWidth="200.0">
               <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="220.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="130.0" />
                   <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
                     <items>
-                        <TableView prefHeight="200.0" prefWidth="200.0">
+                        <TableView fx:id="tablaCorreos" prefHeight="200.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn prefWidth="336.0" text="Asunto" />
-                            <TableColumn prefWidth="344.0" text="Remitente" />
+                            <TableColumn prefWidth="336.0" text="Asunto">
+                              <cellValueFactory><PropertyValueFactory property="asunto" /></cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="344.0" text="Remitente">
+                              <cellValueFactory><PropertyValueFactory property="remitente" /></cellValueFactory>
+                            </TableColumn>
                           </columns>
                         </TableView>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
