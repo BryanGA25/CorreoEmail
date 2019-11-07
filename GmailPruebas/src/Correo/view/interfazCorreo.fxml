@@ -9,7 +9,8 @@
 
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="873.0"
-         tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Correo.view.interfazCorreoController">
+         tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="Correo.view.interfazCorreoController">
   <tabs>
     <Tab text="Untitled Tab 1">
          <content>
