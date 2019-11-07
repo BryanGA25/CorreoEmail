@@ -50,8 +50,8 @@ public class Logica  {
                 listaCorreos.add(new EmailsMensage(mensaje));
             }
 
-            inbox.close(true);
-            store.close();
+            //inbox.close(true);
+            //store.close();
 
 
         } catch (Exception e) {

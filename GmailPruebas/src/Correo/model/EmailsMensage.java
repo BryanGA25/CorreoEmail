@@ -8,12 +8,14 @@ import javax.mail.MessagingException;
 public class EmailsMensage {
 
     private Message mensaje;
+    private String asunto;
+    private String remitente;
 
 
 
     public String getAsunto(){
 
-        String asunto="";
+        asunto="";
         try {
             asunto=mensaje.getSubject();
         } catch (MessagingException e) {
@@ -27,7 +29,7 @@ public class EmailsMensage {
     public String getRemitente(){
 
 
-        String remintente="";
+        remitente="";
 
 
         try {
@@ -35,11 +37,11 @@ public class EmailsMensage {
 
             for(int i=0; i < remitentes;i++){
 
-                remintente=mensaje.getFrom().toString();
+                remitente=mensaje.getFrom().toString();
 
             }
 
-            return remintente;
+            return remitente;
 
 
         } catch (MessagingException e) {

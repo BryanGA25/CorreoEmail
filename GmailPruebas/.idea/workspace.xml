@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GmailPruebas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GmailPruebas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Correo/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="module-info" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -27,14 +31,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Partidos/PartidosFXML" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\CorreoEmail\GmailPruebas\src\Correo" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo\view" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo\model" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo" />
@@ -71,7 +74,7 @@
       <module name="GmailPruebas" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Correo.logica.*" />
+          <option name="PATTERN" value="Correo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,21 +107,7 @@
       <option name="project" value="LOCAL" />
       <updated>1573062977346</updated>
     </task>
-    <task id="LOCAL-00002" summary="Logica creada">
-      <created>1573089023221</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1573089023221</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Correos en tabla">
-      <created>1573092389738</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1573092389738</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,8 +126,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base" />
     <MESSAGE value="Base2" />
-    <MESSAGE value="Logica creada" />
-    <MESSAGE value="Correos en tabla" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correos en tabla" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base2" />
   </component>
 </project>

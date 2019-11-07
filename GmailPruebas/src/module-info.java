@@ -9,5 +9,6 @@ module GmailPruebas {
     exports Correo.model;
     exports Correo;
     exports Correo.logica;
+    opens Correo.view to javafx.fxml;
 
 }

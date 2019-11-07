@@ -16,7 +16,7 @@ public class Launcher extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("view/interfazCorreo.fxml"));
         stage.setTitle("Pantalla Correo");
-        stage.setScene(new Scene(root, 750, 750));
+        stage.setScene(new Scene(root, 900, 900));
         stage.show();
     }
 
