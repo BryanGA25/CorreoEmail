@@ -12,6 +12,8 @@ import java.util.Properties;
 
 public class Logica  {
 
+    private String user;
+    private String contraseña;
     private static Logica INSTANCE = null;
 
     private ObservableList<EmailsMensage> listaCorreos;
@@ -20,6 +22,10 @@ public class Logica  {
         listaCorreos = FXCollections.observableArrayList();
     }
 
+    public void logearse(String user, String contraseña){
+        this.user=user;
+        this.contraseña=contraseña;
+    }
 
     public static Logica getInstance() {
         if(INSTANCE == null){
@@ -39,7 +45,7 @@ public class Logica  {
             Session session = Session.getDefaultInstance(props, null);
 
             Store store = session.getStore("imaps");
-            store.connect("smtp.gmail.com", "bryangallegoclases@gmail.com", "250698tineo");
+            store.connect("smtp.gmail.com", user, contraseña);
 
             Folder inbox = store.getFolder("inbox");
             inbox.open(Folder.READ_ONLY);
