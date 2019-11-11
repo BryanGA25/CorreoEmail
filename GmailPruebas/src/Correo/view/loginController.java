@@ -38,5 +38,6 @@ public class loginController extends BaseController implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         correo.setText("bryangallegoclases@gmail.com");
         contraseña.setText("250698tineo");
+        contraseña.textProperty();
     }
 }
