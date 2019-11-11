@@ -1,8 +1,11 @@
 package Correo.logica;
 
+import Correo.model.EmailTreeItem;
 import Correo.model.EmailsMensage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TreeView;
+import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 import javax.mail.Folder;
@@ -38,15 +41,33 @@ public class Logica  {
         return INSTANCE;
     }
 
-    public WebView mostrarCorreo(WebView we1){
-
-        WebView web=we1;
+    public void  mostrarCorreo(WebView we1){
 
 
 
-        return web;
+
     }
 
+    /* public TreeView getTreeView(){
+
+
+     }
+
+     public EmailTreeItem getFolders(EmailsMensage emailsMensage){
+         EmailTreeItem treeItem=new EmailTreeItem(emailsMensage.getAddress),emailsMensage,null);
+         Folder[] folders=emailsMensage.getStore().getDefaultFolder().list();
+         getFolders(folders,treeItem,emailsMensage);
+
+     }
+
+     private void getFolders(Folder[] folders, EmailTreeItem treeItem, EmailTreeItem emailsMensage) {
+         for (Folder folder:folders) {
+
+
+
+         }
+     }
+ */
     public ObservableList<EmailsMensage> getListaCorreos(){
 
         props = new Properties();

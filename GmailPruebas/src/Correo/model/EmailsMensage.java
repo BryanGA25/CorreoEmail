@@ -42,6 +42,8 @@ public class EmailsMensage {
         return asunto;
     }
 
+
+
     public String getRemitente(){
 
 
@@ -68,6 +70,9 @@ public class EmailsMensage {
 
     }
 
+    public Message getMensaje(){
+        return mensaje;
+    }
 
     public EmailsMensage(Message mensajes) {
         this.mensaje = mensajes;
