@@ -1,6 +1,7 @@
 package Correo.view;
 
 import Correo.logica.Logica;
+import Correo.model.Cuenta;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,6 +16,7 @@ public class loginController extends BaseController implements Initializable{
 
     private String usuario;
     private String contra;
+    private Cuenta cuenta;
     @FXML
     private TextField correo;
 
@@ -23,11 +25,11 @@ public class loginController extends BaseController implements Initializable{
 
     @FXML
     void logearse(ActionEvent event) {
-
         usuario=correo.getText();
         contra=contraseña.getText();
-        Logica.getInstance().logearse(usuario,contra);
-        ((Stage)((Node)event.getSource()).getScene().getWindow()).close();
+        cuenta=new Cuenta(usuario,contra);
+        Logica.getInstance().setCuenta(cuenta);
+        getStage().close();
     }
 
 
@@ -38,6 +40,6 @@ public class loginController extends BaseController implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         correo.setText("bryangallegoclases@gmail.com");
         contraseña.setText("250698tineo");
-        contraseña.textProperty();
+
     }
 }

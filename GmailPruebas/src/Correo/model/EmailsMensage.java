@@ -1,5 +1,4 @@
 package Correo.model;
-
 import javafx.collections.ObservableList;
 
 import javax.mail.Message;
@@ -78,3 +77,5 @@ public class EmailsMensage {
         this.mensaje = mensajes;
     }
 }
+
+
