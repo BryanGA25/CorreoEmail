@@ -6,6 +6,8 @@ module GmailPruebas {
     requires javafx.controls;
     requires  javafx.graphics;
     requires javafx.web;
+    requires commons.email;
+
     exports Correo.view;
     exports Correo.model;
     exports Correo;

@@ -16,10 +16,13 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import org.apache.commons.mail.Email;
+import org.apache.commons.mail.util.MimeMessageParser;
 import org.w3c.dom.Document;
 
 import javax.mail.Folder;
 import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -32,10 +35,12 @@ import java.util.ResourceBundle;
 
 public class interfazCorreoController extends BaseController implements Initializable {
 
-        ObservableList<EmailsMensage> listaCorreos;
-        WebEngine webengine;
-        ArrayList<Cuenta> cuentas=new ArrayList<>();
-        TreeItem raiz;
+        private ObservableList<EmailsMensage> listaCorreos;
+        private WebEngine webengine;
+        private ArrayList<Cuenta> cuentas=new ArrayList<>();
+        private TreeItem raiz;
+        private MimeMessageParser mime;
+
         int cont;
         @FXML
         private TreeView<String> TreeView;
@@ -44,12 +49,12 @@ public class interfazCorreoController extends BaseController implements Initiali
         private TableView<EmailsMensage> tablaCorreos;
 
         @FXML
-        private WebView vistaEmail;
+        private WebView vistaEmail=new WebView();
 
 
         public void logearse() {
 
-                cargarDialogo("login.fxml", 450, 450).abrirDialogo(true);
+                cargarDialogo("login.fxml", 600, 450).abrirDialogo(true);
                 cargarTabla();
                 cuentas=Logica.getInstance().getCuentas();
                 crearTreeView();
@@ -64,25 +69,27 @@ public class interfazCorreoController extends BaseController implements Initiali
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
 
-               TreeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
-                       @Override
-                       public void changed(ObservableValue<? extends TreeItem<String>> observableValue,
-                                           TreeItem<String> stringTreeItem, TreeItem<String> t1) {
-                               String carpeta = "";
-                               while(t1.getParent()!=null){
-                                       carpeta =  t1.toString() + "/" + carpeta;
-                                       t1 = t1.getParent();
-                               }
-                               StringBuilder str = new StringBuilder(carpeta);
-                               str.delete(carpeta.length()-1, carpeta.length());
-                               carpeta = str.toString();
-                               System.out.println(carpeta);
-                               tablaCorreos.setItems(Logica.getInstance().getListaCorreos(carpeta));
-                       }
+                tablaCorreos.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<EmailsMensage>() {
+                        @Override
+                        public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
 
-                       });
+                                mime=new MimeMessageParser((MimeMessage) t1.getMensaje());
+                                vistaEmail.getEngine().loadContent(String.valueOf(mime));
+                         }
+                });
+                TreeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
+                        @Override
+                        public void changed(ObservableValue<? extends TreeItem<String>> observableValue, TreeItem<String> stringTreeItem, TreeItem<String> t1) {
+
+                        }
+                });
+
+
 
         }
+
+
+
 
         public void crearTreeView() {
                 for (cont = 0; cont < cuentas.size(); cont++) {

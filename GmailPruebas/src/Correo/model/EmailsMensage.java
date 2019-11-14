@@ -1,17 +1,25 @@
 package Correo.model;
 import javafx.collections.ObservableList;
 
+import javax.mail.Folder;
 import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.internet.InternetHeaders;
+import javax.mail.internet.MimeMessage;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Date;
 
-public class EmailsMensage {
+public class EmailsMensage{
 
     private Message mensaje;
     private String asunto;
     private String remitente;
     private Date fecha;
+
+
+
 
     public Date getFecha(){
 
