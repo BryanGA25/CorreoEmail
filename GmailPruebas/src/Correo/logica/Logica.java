@@ -6,8 +6,12 @@ import Correo.model.EmailsMensage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TreeItem;
+import org.apache.commons.mail.Email;
+import org.apache.commons.mail.util.MimeMessageParser;
 
 import javax.mail.*;
+import javax.mail.internet.MimeMessage;
+import java.time.chrono.MinguoChronology;
 import java.util.ArrayList;
 import java.util.Properties;
 
@@ -113,6 +117,23 @@ public class Logica  {
                 e.printStackTrace();
             }
         }
+    }
+
+    public MimeMessageParser parsear(Message mensaje){
+
+        MimeMessage msg=null;
+        try {
+            msg=new MimeMessage((MimeMessage) mensaje);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+        MimeMessageParser mimeMessageParser=new MimeMessageParser(msg);
+        try {
+            mimeMessageParser.parse();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return mimeMessageParser;
     }
 
 }

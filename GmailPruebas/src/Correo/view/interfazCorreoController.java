@@ -38,8 +38,8 @@ public class interfazCorreoController extends BaseController implements Initiali
         WebEngine webengine;
         ArrayList<Cuenta> cuentas=new ArrayList<>();
         TreeItem raiz;
-        int contador;
-        private MimeMessageParser mime;
+        int contador=0;
+        private MimeMessage mime;
 
     @FXML
         private TreeView<String> TreeView;
@@ -53,12 +53,12 @@ public class interfazCorreoController extends BaseController implements Initiali
 
         public void logearse() {
 
-                cargarDialogo("login.fxml", 450, 450).abrirDialogo(true);
+                cargarDialogo("login.fxml", 600, 450).abrirDialogo(true);
                 cargarTabla();
                 cuentas=Logica.getInstance().getCuentas();
                 raiz=Logica.getInstance().crearTreeView(contador);
                 TreeView.setRoot(raiz);
-
+                contador++;
                 
 
 
@@ -67,33 +67,36 @@ public class interfazCorreoController extends BaseController implements Initiali
 
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
-
+                if(tablaCorreos.getSelectionModel()!=null) {
             tablaCorreos.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<EmailsMensage>() {
                 @Override
                 public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
 
-                    mime=new MimeMessageParser((MimeMessage) t1.getMensaje());
-                    vistaEmail.getEngine().loadContent(String.valueOf(mime));
-                }
+                                        MimeMessageParser mine = Logica.getInstance().parsear(t1.getMensaje());
+                                vistaEmail.getEngine().loadContent(mine.getHtmlContent());
+                        }
+
+
             });
-            TreeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
-                @Override
-                public void changed(ObservableValue<? extends TreeItem<String>> observableValue, TreeItem<String> stringTreeItem, TreeItem<String> t1) {
-
-                    String carpeta = "";
-                    while(t1.getParent()!=null){
-                        carpeta =  t1.toString() + "/" + carpeta;
-                        t1 = t1.getParent();
-                    }
-                    StringBuilder str = new StringBuilder(carpeta);
-                    str.delete(carpeta.length()-1, carpeta.length());
-                    carpeta = str.toString();
-                    System.out.println(carpeta);
-                    tablaCorreos.setItems(Logica.getInstance().getListaCorreos(carpeta));
+        }
+                if (tablaCorreos.getSelectionModel()!=null) {
+                        TreeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
+                                @Override
+                                public void changed(ObservableValue<? extends TreeItem<String>> observableValue, TreeItem<String> stringTreeItem, TreeItem<String> t1) {
 
 
+                                        if (t1.getValue().equalsIgnoreCase("INBOX")) {
+                                                Logica.getInstance().getListaCorreos(t1.getValue());
+                                        } else {
+                                                String carpeta = "[Gmail]/" + t1.getValue();
+                                                Logica.getInstance().getListaCorreos(carpeta);
+                                        }
+
+
+                                }
+
+                        });
                 }
-            });
         }
 
 
@@ -105,10 +108,4 @@ public class interfazCorreoController extends BaseController implements Initiali
                 }
 
 
-                public void mostrarCorreo () {
-
-                        webengine.load(String.valueOf(listaCorreos.get(1).getMensaje()));
-
-
-                }
         }
