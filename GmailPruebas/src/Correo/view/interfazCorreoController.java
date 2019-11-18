@@ -16,7 +16,6 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-import org.apache.commons.mail.Email;
 import org.apache.commons.mail.util.MimeMessageParser;
 import org.w3c.dom.Document;
 
@@ -35,29 +34,29 @@ import java.util.ResourceBundle;
 
 public class interfazCorreoController extends BaseController implements Initializable {
 
-        private ObservableList<EmailsMensage> listaCorreos;
-        private WebEngine webengine;
-        private ArrayList<Cuenta> cuentas=new ArrayList<>();
-        private TreeItem raiz;
+        ObservableList<EmailsMensage> listaCorreos;
+        WebEngine webengine;
+        ArrayList<Cuenta> cuentas=new ArrayList<>();
+        TreeItem raiz;
+        int contador;
         private MimeMessageParser mime;
 
-        int cont;
-        @FXML
+    @FXML
         private TreeView<String> TreeView;
 
         @FXML
         private TableView<EmailsMensage> tablaCorreos;
 
         @FXML
-        private WebView vistaEmail=new WebView();
+        private WebView vistaEmail;
 
 
         public void logearse() {
 
-                cargarDialogo("login.fxml", 600, 450).abrirDialogo(true);
+                cargarDialogo("login.fxml", 450, 450).abrirDialogo(true);
                 cargarTabla();
                 cuentas=Logica.getInstance().getCuentas();
-                crearTreeView();
+                raiz=Logica.getInstance().crearTreeView(contador);
                 TreeView.setRoot(raiz);
 
                 
@@ -69,51 +68,35 @@ public class interfazCorreoController extends BaseController implements Initiali
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
 
-                tablaCorreos.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<EmailsMensage>() {
-                        @Override
-                        public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
+            tablaCorreos.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<EmailsMensage>() {
+                @Override
+                public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
 
-                                mime=new MimeMessageParser((MimeMessage) t1.getMensaje());
-                                vistaEmail.getEngine().loadContent(String.valueOf(mime));
-                         }
-                });
-                TreeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
-                        @Override
-                        public void changed(ObservableValue<? extends TreeItem<String>> observableValue, TreeItem<String> stringTreeItem, TreeItem<String> t1) {
-
-                        }
-                });
-
-
-
-        }
-
-
-
-
-        public void crearTreeView() {
-                for (cont = 0; cont < cuentas.size(); cont++) {
-                        try {
-                                raiz = new EmailTreeItem(cuentas.get(cont).getCuenta(), cuentas.get(cont), Logica.getInstance().getFolder());
-                                getFolder(((EmailTreeItem)raiz).getFolder().list(), (EmailTreeItem)raiz);
-                        } catch (MessagingException e) {
-                                e.printStackTrace();
-                        }
+                    mime=new MimeMessageParser((MimeMessage) t1.getMensaje());
+                    vistaEmail.getEngine().loadContent(String.valueOf(mime));
                 }
-        }
-        private void getFolder(Folder[] folders,EmailTreeItem objeto) {
-                for (Folder folder : folders) {
-                        EmailTreeItem emailTreeItem = new EmailTreeItem(folder.getName(),cuentas.get(cont) , folder);
-                        objeto.getChildren().add(emailTreeItem);
-                        try {
-                                if(folder.getType() == Folder.HOLDS_FOLDERS){
-                                        getFolder(folder.list(), emailTreeItem  );
-                                }
-                        } catch (MessagingException e) {
-                                e.printStackTrace();
-                        }
+            });
+            TreeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
+                @Override
+                public void changed(ObservableValue<? extends TreeItem<String>> observableValue, TreeItem<String> stringTreeItem, TreeItem<String> t1) {
+
+                    String carpeta = "";
+                    while(t1.getParent()!=null){
+                        carpeta =  t1.toString() + "/" + carpeta;
+                        t1 = t1.getParent();
+                    }
+                    StringBuilder str = new StringBuilder(carpeta);
+                    str.delete(carpeta.length()-1, carpeta.length());
+                    carpeta = str.toString();
+                    System.out.println(carpeta);
+                    tablaCorreos.setItems(Logica.getInstance().getListaCorreos(carpeta));
+
+
                 }
+            });
         }
+
+
 
                 private void cargarTabla () {
                         listaCorreos = new Logica().getInstance().getListaCorreos("INBOX");

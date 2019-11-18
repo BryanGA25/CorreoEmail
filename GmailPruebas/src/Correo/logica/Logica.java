@@ -1,9 +1,11 @@
 package Correo.logica;
 
 import Correo.model.Cuenta;
+import Correo.model.EmailTreeItem;
 import Correo.model.EmailsMensage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TreeItem;
 
 import javax.mail.*;
 import java.util.ArrayList;
@@ -87,7 +89,31 @@ public class Logica  {
         }
         return listaCorreos;
     }
+    public TreeItem crearTreeView(int contador) {
+        EmailTreeItem treeItem = null;
 
+            try {
+                treeItem = new EmailTreeItem(cuentas.get(contador).getCuenta(), cuentas.get(contador), Logica.getInstance().getFolder());
+                getFolder(((EmailTreeItem)treeItem).getFolder().list(), (EmailTreeItem)treeItem,contador);
+            } catch (MessagingException e) {
+                e.printStackTrace();
+            }
+        return treeItem;
+
+    }
+    private void getFolder(Folder[] folders,EmailTreeItem objeto,int contador) {
+        for (Folder folder : folders) {
+            EmailTreeItem emailTreeItem = new EmailTreeItem(folder.getName(),cuentas.get(contador) , folder);
+            objeto.getChildren().add(emailTreeItem);
+            try {
+                if(folder.getType() == Folder.HOLDS_FOLDERS){
+                    getFolder(folder.list(), emailTreeItem,contador  );
+                }
+            } catch (MessagingException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
 
