@@ -35,7 +35,7 @@ import java.util.ResourceBundle;
 public class interfazCorreoController extends BaseController implements Initializable {
 
         ObservableList<EmailsMensage> listaCorreos;
-        WebEngine webengine;
+
         ArrayList<Cuenta> cuentas=new ArrayList<>();
         TreeItem raiz;
         int contador=0;
