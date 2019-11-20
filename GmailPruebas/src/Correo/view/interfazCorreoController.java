@@ -1,33 +1,21 @@
 package Correo.view;
 
 import Correo.logica.Logica;
-import Correo.model.EmailTreeItem;
 import Correo.model.Cuenta;
 
 import Correo.model.EmailsMensage;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
-import javafx.concurrent.Worker;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
-import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import org.apache.commons.mail.util.MimeMessageParser;
-import org.w3c.dom.Document;
 
-import javax.mail.Folder;
-import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import java.io.OutputStreamWriter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -51,7 +39,7 @@ public class interfazCorreoController extends BaseController implements Initiali
         private WebView vistaEmail;
 
 
-        public void logearse() {
+          void logearse() {
 
                 cargarDialogo("login.fxml", 600, 450).abrirDialogo(true);
                 cargarTabla();
@@ -72,7 +60,7 @@ public class interfazCorreoController extends BaseController implements Initiali
                 @Override
                 public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
 
-                                        MimeMessageParser mine = Logica.getInstance().parsear(t1.getMensaje());
+                                MimeMessageParser mine = Logica.getInstance().getMimeMessageParser(t1.getMensaje());
                                 vistaEmail.getEngine().loadContent(mine.getHtmlContent());
                         }
 

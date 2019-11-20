@@ -119,7 +119,8 @@ public class Logica  {
         }
     }
 
-    public MimeMessageParser parsear(Message mensaje){
+
+    public MimeMessageParser getMimeMessageParser (Message mensaje){
 
         MimeMessage msg=null;
         try {
