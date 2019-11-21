@@ -46,6 +46,7 @@ public class interfazCorreoController extends BaseController implements Initiali
                 cuentas=Logica.getInstance().getCuentas();
                 raiz=Logica.getInstance().getTree();
                 TreeView.setRoot(raiz);
+
                 TreeView.setShowRoot(false);
                 cargarTabla();
                 contador++;
