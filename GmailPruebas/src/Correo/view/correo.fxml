@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.HTMLEditor?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="97.0" prefHeight="72.0" prefWidth="600.0" AnchorPane.bottomAnchor="228.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0" />
+            <TextField layoutX="300.0" layoutY="23.0" prefHeight="25.0" prefWidth="287.0" />
+            <TextField layoutX="300.0" layoutY="64.0" prefHeight="25.0" prefWidth="287.0" />
+            <Label layoutX="89.0" layoutY="27.0" text="Enviar a:" />
+            <Label layoutX="92.0" layoutY="68.0" text="Asunto" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
