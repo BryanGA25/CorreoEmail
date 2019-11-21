@@ -39,13 +39,15 @@ public class interfazCorreoController extends BaseController implements Initiali
         private WebView vistaEmail;
 
 
-          void logearse() {
+          public void logearse() {
 
                 cargarDialogo("login.fxml", 600, 450).abrirDialogo(true);
-                cargarTabla();
+
                 cuentas=Logica.getInstance().getCuentas();
-                raiz=Logica.getInstance().crearTreeView(contador);
+                raiz=Logica.getInstance().getTree();
                 TreeView.setRoot(raiz);
+                TreeView.setShowRoot(false);
+                cargarTabla();
                 contador++;
                 
 

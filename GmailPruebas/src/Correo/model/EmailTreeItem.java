@@ -42,11 +42,5 @@ public class EmailTreeItem extends TreeItem<String> {
         this.folder = folder;
     }
 
-    @Override
-    public String toString() {
-        return "EmailTreeItem{" +
-                "nombre='" + nombre + '\'' +
-                ", emailAccount=" + emailAccount +
-                '}';
-    }
+
 }

@@ -29,6 +29,7 @@ public class loginController extends BaseController implements Initializable{
         contra=contraseña.getText();
         cuenta=new Cuenta(usuario,contra);
         Logica.getInstance().setCuenta(cuenta);
+        Logica.getInstance().rootcreate(cuenta);
         getStage().close();
     }
 

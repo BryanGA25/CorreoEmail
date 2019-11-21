@@ -26,9 +26,11 @@ public class Logica  {
     private ArrayList <Cuenta> cuentas=new ArrayList<>();
     private int cont=0;
     private ObservableList<EmailsMensage> listaCorreos;
+    private EmailTreeItem treeItem;
 
     public Logica(){
         listaCorreos = FXCollections.observableArrayList();
+        treeItem= new EmailTreeItem("", null, null);
     }
 
     public void logearse(String user, String contraseña){
@@ -62,15 +64,32 @@ public class Logica  {
         }
         return null;
     }
+    public void rootcreate(Cuenta cuenta){
+        Folder f = loadMail(cuenta);
+        treeItem.getChildren().add(crearTreeView(cuenta, f));
+
+    }
+    private Folder loadMail(Cuenta mailAccount){
+        try {
+            props = new Properties();
+            props.put("mail.imap.ssl.checkserveridentity", "false");
+            props.put ("mail.imaps.ssl.trust", "*");
+            Session emailSesion = Session.getDefaultInstance(props, null);
+            store = emailSesion.getStore("imaps");
+            store.connect("smtp.gmail.com", mailAccount.getCuenta(), mailAccount.getPassword());
+            return store.getDefaultFolder();
+        }catch(MessagingException e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     public ObservableList<EmailsMensage> getListaCorreos(String direccion){
 
-        props = new Properties();
-        props.put("mail.imap.ssl.checkserveridentity", "false");
-        props.put ("mail.imaps.ssl.trust", "*");
-
         try {
-
+            props = new Properties();
+            props.put("mail.imap.ssl.checkserveridentity", "false");
+            props.put ("mail.imaps.ssl.trust", "*");
             session = Session.getDefaultInstance(props, null);
 
             store = session.getStore("imaps");
@@ -93,25 +112,25 @@ public class Logica  {
         }
         return listaCorreos;
     }
-    public TreeItem crearTreeView(int contador) {
-        EmailTreeItem treeItem = null;
-
+    public TreeItem crearTreeView(Cuenta cuenta,Folder folder) {
+        EmailTreeItem emailroot=null;
             try {
-                treeItem = new EmailTreeItem(cuentas.get(contador).getCuenta(), cuentas.get(contador), Logica.getInstance().getFolder());
-                getFolder(((EmailTreeItem)treeItem).getFolder().list(), (EmailTreeItem)treeItem,contador);
+                emailroot = new EmailTreeItem(cuenta.getCuenta(), cuenta, Logica.getInstance().getFolder());
+                getFolders(((EmailTreeItem)emailroot).getFolder().list(), (EmailTreeItem)emailroot,cuenta);
             } catch (MessagingException e) {
                 e.printStackTrace();
             }
-        return treeItem;
+
+        return emailroot;
 
     }
-    private void getFolder(Folder[] folders,EmailTreeItem objeto,int contador) {
+    private void getFolders(Folder[] folders,EmailTreeItem objeto,Cuenta cuenta) {
         for (Folder folder : folders) {
-            EmailTreeItem emailTreeItem = new EmailTreeItem(folder.getName(),cuentas.get(contador) , folder);
+            EmailTreeItem emailTreeItem = new EmailTreeItem(folder.getName(),cuenta  , folder);
             objeto.getChildren().add(emailTreeItem);
             try {
                 if(folder.getType() == Folder.HOLDS_FOLDERS){
-                    getFolder(folder.list(), emailTreeItem,contador  );
+                    getFolders(folder.list(), emailTreeItem,cuenta);
                 }
             } catch (MessagingException e) {
                 e.printStackTrace();
@@ -119,6 +138,9 @@ public class Logica  {
         }
     }
 
+    public  EmailTreeItem getTree(){
+        return treeItem;
+    }
 
     public MimeMessageParser getMimeMessageParser (Message mensaje){
 
