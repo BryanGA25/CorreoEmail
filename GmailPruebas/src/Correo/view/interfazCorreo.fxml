@@ -31,6 +31,7 @@
                             <Menu mnemonicParsing="false" text="Correo">
                               <items>
                                 <MenuItem mnemonicParsing="false" onAction="#logearse" text="Logearse" />
+                                    <MenuItem mnemonicParsing="false" onAction="#enviar" text="Enviar" />
                                     <MenuItem mnemonicParsing="false" text="Desconectar" />
                               </items>
                             </Menu>

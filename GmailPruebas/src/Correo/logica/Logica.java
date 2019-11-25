@@ -85,7 +85,9 @@ public class Logica  {
     }
 
     public ObservableList<EmailsMensage> getListaCorreos(String direccion){
+   /* if(folder!=null && folder.getType()=3){
 
+    }*/
         try {
             props = new Properties();
             props.put("mail.imap.ssl.checkserveridentity", "false");

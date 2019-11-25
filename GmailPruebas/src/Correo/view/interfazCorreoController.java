@@ -54,6 +54,9 @@ public class interfazCorreoController extends BaseController implements Initiali
 
 
         }
+        public void enviar(){
+              cargarDialogo("correo.fxml",800,800).abrirDialogo(true);
+        }
 
 
         @Override
