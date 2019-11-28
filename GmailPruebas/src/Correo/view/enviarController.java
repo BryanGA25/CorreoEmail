@@ -20,6 +20,8 @@ public class enviarController extends BaseController implements Initializable {
     }
 
     public void enviarCorreo(){
-        Logica.getInstance().enviarCorreo();
+
+        Logica.getInstance().enviarCorreo(htmleditor.getHtmlText());
     }
+
 }

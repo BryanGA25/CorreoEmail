@@ -162,7 +162,7 @@ public class Logica  {
         return mimeMessageParser;
     }
 
-    public void enviarCorreo(){
+    public void enviarCorreo(String texto){
 
         String host="smtp.gmail.com";
         final String user="bryangallegoclases@gmail.com";//change accordingly
@@ -198,7 +198,7 @@ public class Logica  {
             message.setFrom(new InternetAddress(user));
             message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
             message.setSubject("Prueba");
-            message.setText("HOLOOOOO");
+            message.setText(texto);
 
             //send the message
             Transport.send(message);
