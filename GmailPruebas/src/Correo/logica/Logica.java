@@ -10,6 +10,7 @@ import org.apache.commons.mail.Email;
 import org.apache.commons.mail.util.MimeMessageParser;
 
 import javax.mail.*;
+import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.time.chrono.MinguoChronology;
 import java.util.ArrayList;
@@ -161,6 +162,55 @@ public class Logica  {
         return mimeMessageParser;
     }
 
+    public void enviarCorreo(){
+
+        String host="smtp.gmail.com";
+        final String user="bryangallegoclases@gmail.com";//change accordingly
+        final String password="250698tineo";//change accordingly
+
+        String to="sandierparapromociones@gmail.com";//change accordingly
+
+        //Get the session object
+        Properties props = new Properties();
+        props.put("mail.smtp.user","username");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "25");
+        props.put("mail.debug", "true");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable","true");
+        props.put("mail.smtp.EnableSSL.enable","true");
+
+        props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+        props.setProperty("mail.smtp.socketFactory.fallback", "false");
+        props.setProperty("mail.smtp.port", "465");
+        props.setProperty("mail.smtp.socketFactory.port", "465");
+
+        Session session = Session.getDefaultInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(user,password);
+                    }
+                });
+
+        //Compose the message
+        try {
+            MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(user));
+            message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
+            message.setSubject("Prueba");
+            message.setText("HOLOOOOO");
+
+            //send the message
+            Transport.send(message);
+
+            System.out.println("message sent successfully...");
+
+        } catch (MessagingException e) {e.printStackTrace();}
+    }
+
+
 }
+
+
 
 
