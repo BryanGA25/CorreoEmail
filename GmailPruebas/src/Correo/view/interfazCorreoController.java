@@ -9,10 +9,12 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.web.WebView;
+import javafx.util.Callback;
 import org.apache.commons.mail.util.MimeMessageParser;
 
 import javax.mail.internet.MimeMessage;
@@ -61,6 +63,31 @@ public class interfazCorreoController extends BaseController implements Initiali
 
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
+
+              tablaCorreos.setRowFactory(new Callback<TableView<EmailsMensage>, TableRow<EmailsMensage>>() {
+                  @Override
+                  public TableRow<EmailsMensage> call(TableView<EmailsMensage> emailsMensageTableView) {
+                      return new TableRow<EmailsMensage>(){
+                          @Override
+                          protected void updateItem(EmailsMensage emailsMensage, boolean b) {
+                              super.updateItem(emailsMensage, b);
+                              if (emailsMensage!=null){
+                                  if (!emailsMensage.leido()){
+                                      setStyle("-fx-font-weight:bold");
+                                  }else {
+                                      setStyle("");
+                                  }
+                              }
+                          }
+
+
+                      };
+
+
+                  }
+              });
+
+
                 if(tablaCorreos.getSelectionModel()!=null) {
             tablaCorreos.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<EmailsMensage>() {
                 @Override

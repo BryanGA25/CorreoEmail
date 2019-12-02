@@ -4,7 +4,10 @@
     <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/correo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/correo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Correo/view/enviarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/enviarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574965300592</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="enviar Correos2">
+      <created>1574966089979</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1574966089979</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +222,7 @@
     <MESSAGE value="Modificaciones leves y ventana de mandar correo" />
     <MESSAGE value="Crear correo" />
     <MESSAGE value="enviar Correos" />
-    <option name="LAST_COMMIT_MESSAGE" value="enviar Correos" />
+    <MESSAGE value="enviar Correos2" />
+    <option name="LAST_COMMIT_MESSAGE" value="enviar Correos2" />
   </component>
 </project>

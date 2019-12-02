@@ -1,10 +1,7 @@
 package Correo.model;
 import javafx.collections.ObservableList;
 
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
+import javax.mail.*;
 import javax.mail.internet.InternetHeaders;
 import javax.mail.internet.MimeMessage;
 import java.io.InputStream;
@@ -35,6 +32,16 @@ public class EmailsMensage{
 
     }
 
+    public boolean leido(){
+
+        try {
+            return mensaje.isSet(Flags.Flag.SEEN);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
 
     public String getAsunto(){
 

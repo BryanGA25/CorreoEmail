@@ -3,12 +3,19 @@ package Correo.view;
 import Correo.logica.Logica;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 import javafx.scene.web.HTMLEditor;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class enviarController extends BaseController implements Initializable {
+
+    @FXML
+    private TextField destinatario;
+
+    @FXML
+    private TextField asunto;
 
     @FXML
     private HTMLEditor htmleditor;
@@ -21,7 +28,9 @@ public class enviarController extends BaseController implements Initializable {
 
     public void enviarCorreo(){
 
-        Logica.getInstance().enviarCorreo(htmleditor.getHtmlText());
+
+
+        Logica.getInstance().enviarCorreo(htmleditor.getHtmlText(),destinatario.getText(),asunto.getText());
     }
 
 }

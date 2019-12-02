@@ -21,9 +21,9 @@ public class Logica  {
     private String user;
     private String contraseña;
     private static Logica INSTANCE = null;
-    private Session session;
-    private Store store;
-    private Properties props;
+    private Session session=null;
+    private Store store=null;
+    private Properties props=new Properties();
     private ArrayList <Cuenta> cuentas=new ArrayList<>();
     private int cont=0;
     private ObservableList<EmailsMensage> listaCorreos;
@@ -75,8 +75,8 @@ public class Logica  {
             props = new Properties();
             props.put("mail.imap.ssl.checkserveridentity", "false");
             props.put ("mail.imaps.ssl.trust", "*");
-            Session emailSesion = Session.getDefaultInstance(props, null);
-            store = emailSesion.getStore("imaps");
+            propsEviar(mailAccount.getCuenta(), mailAccount.getPassword());
+            store = session.getStore("imaps");
             store.connect("smtp.gmail.com", mailAccount.getCuenta(), mailAccount.getPassword());
             return store.getDefaultFolder();
         }catch(MessagingException e){
@@ -93,8 +93,7 @@ public class Logica  {
             props = new Properties();
             props.put("mail.imap.ssl.checkserveridentity", "false");
             props.put ("mail.imaps.ssl.trust", "*");
-            session = Session.getDefaultInstance(props, null);
-
+            propsEviar(cuentas.get(cont-1).getCuenta(),cuentas.get(cont-1).getPassword());
             store = session.getStore("imaps");
             store.connect("smtp.gmail.com", cuentas.get(cont-1).getCuenta(), cuentas.get(cont-1).getPassword());
 
@@ -162,16 +161,39 @@ public class Logica  {
         return mimeMessageParser;
     }
 
-    public void enviarCorreo(String texto){
+    public void enviarCorreo(String texto,String destinatario,String asunto){
 
         String host="smtp.gmail.com";
-        final String user="bryangallegoclases@gmail.com";//change accordingly
-        final String password="250698tineo";//change accordingly
+        final String usuario="bryangallegoclases@gmail.com";//change accordingly
+        final String contraseña="250698tineo";//change accordingly
 
-        String to="sandierparapromociones@gmail.com";//change accordingly
+        String to=destinatario;//change accordingly
+
+        //Compose the message
+        propsEviar(usuario,contraseña);
+        try {
+            MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(usuario));
+            message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
+            message.setSubject(asunto);
+            message.setText(texto);
+
+            //send the message
+            Transport.send(message);
+
+            System.out.println("message sent successfully...");
+
+            props.clear();
+
+        } catch (MessagingException e) {e.printStackTrace();}
+    }
+
+
+
+    private  void propsEviar(String usuario, String contraseña){
 
         //Get the session object
-        Properties props = new Properties();
+
         props.put("mail.smtp.user","username");
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "25");
@@ -185,29 +207,14 @@ public class Logica  {
         props.setProperty("mail.smtp.port", "465");
         props.setProperty("mail.smtp.socketFactory.port", "465");
 
-        Session session = Session.getDefaultInstance(props,
+        session = Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(user,password);
+                        return new PasswordAuthentication(usuario,contraseña);
                     }
                 });
 
-        //Compose the message
-        try {
-            MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(user));
-            message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
-            message.setSubject("Prueba");
-            message.setText(texto);
-
-            //send the message
-            Transport.send(message);
-
-            System.out.println("message sent successfully...");
-
-        } catch (MessagingException e) {e.printStackTrace();}
     }
-
 
 }
 

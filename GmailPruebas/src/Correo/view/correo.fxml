@@ -11,8 +11,8 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <TextField layoutX="300.0" layoutY="11.0" prefHeight="25.0" prefWidth="287.0" />
-            <TextField layoutX="300.0" layoutY="48.0" prefHeight="25.0" prefWidth="287.0" />
+            <TextField fx:id="destinatario" layoutX="300.0" layoutY="11.0" prefHeight="25.0" prefWidth="287.0" />
+            <TextField fx:id="asunto" layoutX="300.0" layoutY="48.0" prefHeight="25.0" prefWidth="287.0" />
             <Label layoutX="89.0" layoutY="15.0" text="Enviar a:" />
             <Label layoutX="92.0" layoutY="52.0" text="Asunto" />
             <Button layoutY="69.0" mnemonicParsing="false" onAction="#enviarCorreo" text="Enviar" />
