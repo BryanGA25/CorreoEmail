@@ -40,7 +40,7 @@ public class EmailsMensage{
             e.printStackTrace();
         }
 
-        return false;
+        return true;
     }
 
     public String getAsunto(){
