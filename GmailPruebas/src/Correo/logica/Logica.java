@@ -161,20 +161,21 @@ public class Logica  {
         return mimeMessageParser;
     }
 
-    public void enviarCorreo(String texto,String destinatario,String asunto){
+    public void enviarCorreo(String texto,String[] destinatario,String asunto){
 
         String host="smtp.gmail.com";
         final String usuario="bryangallegoclases@gmail.com";//change accordingly
         final String contraseña="250698tineo";//change accordingly
 
-        String to=destinatario;//change accordingly
 
         //Compose the message
         propsEviar(usuario,contraseña);
         try {
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress(usuario));
-            message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
+            for(int i=0;i<destinatario.length;i++) {
+                message.addRecipient(Message.RecipientType.TO, new InternetAddress(destinatario[i]));
+            }
             message.setSubject(asunto);
             message.setText(texto);
 
@@ -197,7 +198,6 @@ public class Logica  {
         props.put("mail.smtp.user","username");
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "25");
-        props.put("mail.debug", "true");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable","true");
         props.put("mail.smtp.EnableSSL.enable","true");

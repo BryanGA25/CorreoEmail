@@ -11,11 +11,12 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <TextField fx:id="destinatario" layoutX="300.0" layoutY="11.0" prefHeight="25.0" prefWidth="287.0" />
-            <TextField fx:id="asunto" layoutX="300.0" layoutY="48.0" prefHeight="25.0" prefWidth="287.0" />
+            <TextField fx:id="destinatario" layoutX="149.0" layoutY="11.0" prefHeight="25.0" prefWidth="287.0" />
+            <TextField fx:id="asunto" layoutX="149.0" layoutY="48.0" prefHeight="25.0" prefWidth="287.0" />
             <Label layoutX="89.0" layoutY="15.0" text="Enviar a:" />
             <Label layoutX="92.0" layoutY="52.0" text="Asunto" />
             <Button layoutY="69.0" mnemonicParsing="false" onAction="#enviarCorreo" text="Enviar" />
+            <Button layoutX="451.0" layoutY="11.0" mnemonicParsing="false" onAction="#añadirDestinatario" text="Añadir destinatario" />
          </children>
       </AnchorPane>
       <HTMLEditor fx:id="htmleditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="411.0" prefWidth="600.0" />
