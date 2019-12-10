@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -54,8 +55,14 @@
                         </TableView>
                         <ToolBar prefHeight="40.0" prefWidth="200.0">
                           <items>
-                            <Button mnemonicParsing="false" text="Reenviar" />
-                              <Button mnemonicParsing="false" text="Responder" />
+                            <Button mnemonicParsing="false" onAction="#reenviar" text="Reenviar" />
+                              <Button mnemonicParsing="false" onAction="#responder" text="Responder" />
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="borrar" mnemonicParsing="false" onAction="#borrarCorreo" prefHeight="26.0" prefWidth="59.0" text="Borrar" />
+                                 </children>
+                              </AnchorPane>
+                              <ComboBox fx:id="temas" prefWidth="150.0" />
                           </items>
                         </ToolBar>
                         <WebView fx:id="vistaEmail" prefHeight="200.0" prefWidth="200.0" />

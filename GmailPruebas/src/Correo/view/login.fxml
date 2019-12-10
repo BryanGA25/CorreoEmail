@@ -12,13 +12,13 @@
   <children>
       <TitledPane animated="false" text="Login">
          <content>
-          <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
+          <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="446.0" prefWidth="638.0">
             <children>
-                  <TextField fx:id="correo" layoutX="294.0" layoutY="98.0" prefHeight="26.0" prefWidth="194.0" />
-                  <Label layoutX="100.0" layoutY="102.0" prefHeight="18.0" prefWidth="106.0" text="Correo" />
-                  <Label layoutX="100.0" layoutY="208.0" text="Contraseña" />
-                  <Button fx:id="login" layoutX="100.0" layoutY="312.0" mnemonicParsing="false" onAction="#logearse" text="Acceptar" />
-                  <PasswordField fx:id="contraseña" layoutX="292.0" layoutY="204.0" prefHeight="25.0" prefWidth="198.0" />
+                  <TextField fx:id="correo" layoutX="294.0" layoutY="98.0" prefHeight="26.0" prefWidth="194.0" AnchorPane.rightAnchor="149.99999999999997" AnchorPane.topAnchor="98.0" />
+                  <Label layoutX="88.0" layoutY="111.0" prefHeight="18.0" prefWidth="106.0" text="Correo" AnchorPane.rightAnchor="444.0" AnchorPane.topAnchor="111.0" />
+                  <Label layoutX="100.0" layoutY="208.0" text="Contraseña" AnchorPane.rightAnchor="478.4" AnchorPane.topAnchor="208.0" />
+                  <Button fx:id="login" layoutX="100.0" layoutY="312.0" mnemonicParsing="false" onAction="#logearse" text="Acceptar" AnchorPane.bottomAnchor="36.00000000000002" AnchorPane.leftAnchor="100.0" />
+                  <PasswordField fx:id="contraseña" layoutX="292.0" layoutY="204.0" prefHeight="25.0" prefWidth="198.0" AnchorPane.rightAnchor="147.99999999999997" AnchorPane.topAnchor="204.0" />
             </children>
           </AnchorPane>
          </content>

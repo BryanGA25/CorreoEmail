@@ -85,27 +85,25 @@ public class Logica  {
         }
     }
 
-    public ObservableList<EmailsMensage> getListaCorreos(String direccion){
-   /* if(folder!=null && folder.getType()=3){
+    public ObservableList<EmailsMensage> getListaCorreos(String direccion) {
 
-    }*/
+
         try {
             props = new Properties();
             props.put("mail.imap.ssl.checkserveridentity", "false");
-            props.put ("mail.imaps.ssl.trust", "*");
-            propsEviar(cuentas.get(cont-1).getCuenta(),cuentas.get(cont-1).getPassword());
+            props.put("mail.imaps.ssl.trust", "*");
+            propsEviar(cuentas.get(cont - 1).getCuenta(), cuentas.get(cont - 1).getPassword());
             store = session.getStore("imaps");
-            store.connect("smtp.gmail.com", cuentas.get(cont-1).getCuenta(), cuentas.get(cont-1).getPassword());
+            store.connect("smtp.gmail.com", cuentas.get(cont - 1).getCuenta(), cuentas.get(cont - 1).getPassword());
 
             Folder inbox = store.getFolder(direccion);
-            inbox. open(1);
+            inbox.open(1);
 
             Message[] messages = inbox.getMessages();
             listaCorreos.clear();
-            for (Message mensaje:messages) {
+            for (Message mensaje : messages) {
                 listaCorreos.add(new EmailsMensage(mensaje));
             }
-
 
 
         } catch (Exception e) {
@@ -113,7 +111,9 @@ public class Logica  {
             return null;
         }
         return listaCorreos;
+
     }
+
     public TreeItem crearTreeView(Cuenta cuenta,Folder folder) {
         EmailTreeItem emailroot=null;
             try {
@@ -209,13 +209,28 @@ public class Logica  {
 
         session = Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(usuario,contraseña);
-                    }
-                });
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(usuario,contraseña);
+            }
+        });
 
     }
 
+    public void deleteMail(EmailsMensage mail, Folder folder, Cuenta mailAccount) {
+
+        Message m = mail.getMensaje();
+        try {
+            if (!folder.getName().equals("Papelera")) {
+                Folder papelera = folder.getStore().getDefaultFolder().getFolder("[Gmail]/Papelera");
+                folder.copyMessages(new Message[]{m}, papelera);
+            } else {
+                m.setFlag(Flags.Flag.DELETED, true);
+                folder.close(true);
+            }
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 

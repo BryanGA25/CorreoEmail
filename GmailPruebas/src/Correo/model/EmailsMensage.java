@@ -1,5 +1,6 @@
 package Correo.model;
 import javafx.collections.ObservableList;
+import org.apache.commons.mail.util.MimeMessageParser;
 
 import javax.mail.*;
 import javax.mail.internet.InternetHeaders;
@@ -16,7 +17,36 @@ public class EmailsMensage{
     private Date fecha;
 
 
+    public String getContenido(){
+        MimeMessageParser parser = new MimeMessageParser((MimeMessage) mensaje      );
+        try {
+            parser.parse();
+            if(parser.getHtmlContent() != null){
+                return parser.getHtmlContent();
+            }
+            else{
+                return parser.getPlainContent();
+            }
 
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public String[] getDestinatarios(){
+        String[] destinatarios;
+        try {
+            destinatarios = new String[mensaje.getAllRecipients().length];
+            for(int i=0; i<mensaje.getAllRecipients().length;i++){
+                destinatarios[i] = mensaje.getAllRecipients()[i].toString();
+            }
+            return destinatarios;
+        } catch (MessagingException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
 
     public Date getFecha(){
 

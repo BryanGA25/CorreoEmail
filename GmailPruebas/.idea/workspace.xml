@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="&#10;mandar varias personas">
+    <list default="true" id="613d663b-9643-49bb-adec-7170e0b99295" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/correo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/correo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/model/EmailTreeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/model/EmailTreeItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/enviarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/enviarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/login.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +36,8 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GmailPruebas" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -94,7 +99,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="" />
+      <changelist id="613d663b-9643-49bb-adec-7170e0b99295" name="Default Changelist" comment="" />
       <created>1572880600817</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -121,99 +126,46 @@
       <option name="project" value="LOCAL" />
       <updated>1573150806905</updated>
     </task>
-    <task id="LOCAL-00004" summary="Intento sacar por pantalla y tree view">
-      <created>1573488810310</created>
+    <task id="LOCAL-00004" summary="Intento actualizar TableView">
+      <created>1573689508517</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1573488810310</updated>
+      <updated>1573689508517</updated>
     </task>
-    <task id="LOCAL-00005" summary="Intento sacar por pantalla y tree view">
-      <created>1573756295881</created>
+    <task id="LOCAL-00005" summary="Ver TreeItem">
+      <created>1574083667861</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1573756295881</updated>
+      <updated>1574083667861</updated>
     </task>
-    <task id="LOCAL-00006" summary="TreeView Funcional y Visualizar Correo">
-      <created>1574091921420</created>
+    <task id="LOCAL-00006" summary="Ver TreeItem">
+      <created>1574338794924</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1574091921420</updated>
+      <updated>1574338794924</updated>
     </task>
-    <task id="LOCAL-00007" summary="Mod leves">
-      <created>1574093307006</created>
+    <task id="LOCAL-00007" summary="Tree Item con Varios Correos">
+      <created>1574338859263</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1574093307006</updated>
+      <updated>1574338859263</updated>
     </task>
-    <task id="LOCAL-00008" summary="Modificaciones leves">
-      <created>1574273941377</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1574273941377</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Modificaciones leves">
-      <created>1574359879589</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1574359879589</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Modificaciones leves y ventana de mandar correo">
-      <created>1574360161684</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1574360161684</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Crear correo">
-      <created>1574699201539</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1574699201539</updated>
-    </task>
-    <task id="LOCAL-00012" summary="enviar Correos">
-      <created>1574965300591</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1574965300592</updated>
-    </task>
-    <task id="LOCAL-00013" summary="enviar Correos2">
-      <created>1574966089979</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1574966089979</updated>
-    </task>
-    <task id="LOCAL-00014" summary="enviar Correos y marcar los no leidos.">
-      <created>1575304044214</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1575304044214</updated>
-    </task>
-    <task id="LOCAL-00015" summary="enviar Correos y marcar los no leidos.">
-      <created>1575311126796</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1575311126796</updated>
-    </task>
-    <task id="LOCAL-00016" summary="&#10;mandar varias personas">
-      <created>1575402754119</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1575402754119</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -233,16 +185,9 @@
     <MESSAGE value="Base2" />
     <MESSAGE value="Visible" />
     <MESSAGE value="Sacar lista correos" />
-    <MESSAGE value="Intento sacar por pantalla y tree view" />
-    <MESSAGE value="TreeView Funcional y Visualizar Correo" />
-    <MESSAGE value="Mod leves" />
-    <MESSAGE value="Modificaciones leves" />
-    <MESSAGE value="Modificaciones leves y ventana de mandar correo" />
-    <MESSAGE value="Crear correo" />
-    <MESSAGE value="enviar Correos" />
-    <MESSAGE value="enviar Correos2" />
-    <MESSAGE value="enviar Correos y marcar los no leidos." />
-    <MESSAGE value="&#10;mandar varias personas" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;mandar varias personas" />
+    <MESSAGE value="Intento actualizar TableView" />
+    <MESSAGE value="Ver TreeItem" />
+    <MESSAGE value="Tree Item con Varios Correos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tree Item con Varios Correos" />
   </component>
 </project>
