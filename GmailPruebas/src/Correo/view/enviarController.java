@@ -2,10 +2,13 @@ package Correo.view;
 
 import Correo.logica.Logica;
 import Correo.model.Cuenta;
+import Correo.model.EmailTreeItem;
 import Correo.model.EmailsMensage;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TreeItem;
 import javafx.scene.web.HTMLEditor;
 
 import java.net.URL;
@@ -14,6 +17,8 @@ import java.util.ResourceBundle;
 
 public class enviarController extends BaseController implements Initializable {
 
+
+    private Cuenta cuenta;
     private ArrayList<String>destinatarios;
 
     @FXML
@@ -33,6 +38,7 @@ public class enviarController extends BaseController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         destinatarios=new ArrayList<>();
 
+
     }
 
     public void enviarCorreo(){
@@ -43,11 +49,12 @@ public class enviarController extends BaseController implements Initializable {
                 destinatarios1[i] = destinatarios.get(i);
             }
 
-        Logica.getInstance().enviarCorreo(htmleditor.getHtmlText(),destinatarios1,asunto.getText());
+        Logica.getInstance().enviarCorreo(htmleditor.getHtmlText(),destinatarios1,asunto.getText(),cuenta);
             getStage().close();
     }
 
     public void reenviar(EmailsMensage mail) {
+
         String contenido = "---------- Mensaje reenviado ----------" +
                 "<br>De: " + mail.getRemitente() +
                 "<br>Fecha: " + mail.getFecha()  +
@@ -67,4 +74,10 @@ public class enviarController extends BaseController implements Initializable {
         getStage().close();
     }
 
+    public void sender(EmailTreeItem cuenta) {
+
+        this.cuenta=cuenta.getEmailAccount();
+
+
+    }
 }

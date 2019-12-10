@@ -76,6 +76,10 @@ public class interfazCorreoController extends BaseController implements Initiali
     }
 
     public void enviar() {
+
+        BaseController controller = cargarDialogo("correo.fxml", 800, 600);
+        ((enviarController) controller).sender((EmailTreeItem)TreeView.getSelectionModel().getSelectedItem());
+        controller.abrirDialogo(true);
         cargarDialogo("correo.fxml", 800, 800).abrirDialogo(true);
     }
 
@@ -84,9 +88,8 @@ public class interfazCorreoController extends BaseController implements Initiali
 
 
         EmailsMensage mensaje = tablaCorreos.getSelectionModel().getSelectedItem();
-
-
         BaseController controller = cargarDialogo("correo.fxml", 800, 600);
+        ((enviarController) controller).sender((EmailTreeItem)TreeView.getSelectionModel().getSelectedItem());
         ((enviarController) controller).reenviar(mensaje);
         controller.abrirDialogo(true);
 
@@ -97,6 +100,7 @@ public class interfazCorreoController extends BaseController implements Initiali
 
         EmailsMensage mensaje = tablaCorreos.getSelectionModel().getSelectedItem();
         BaseController controller = cargarDialogo("correo.fxml", 800, 600);
+        ((enviarController) controller).sender((EmailTreeItem)TreeView.getSelectionModel().getSelectedItem());
         ((enviarController) controller).responder(mensaje);
         controller.abrirDialogo(true);
     }
@@ -153,11 +157,8 @@ public class interfazCorreoController extends BaseController implements Initiali
                 public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
 
                     String mensaje = t1.getContenido();
-                    WebEngine webEngine = vistaEmail.getEngine();
-                    webEngine.loadContent(mensaje);
-
-                    /*MimeMessageParser mine = Logica.getInstance().getMimeMessageParser(t1.getMensaje());
-                    vistaEmail.getEngine().loadContent(mine.getHtmlContent());*/
+                    WebEngine web= vistaEmail.getEngine();
+                    web.loadContent(mensaje);
                 }
 
 

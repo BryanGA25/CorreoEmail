@@ -161,11 +161,11 @@ public class Logica  {
         return mimeMessageParser;
     }
 
-    public void enviarCorreo(String texto,String[] destinatario,String asunto){
+    public void enviarCorreo(String texto, String[] destinatario, String asunto, Cuenta cuenta){
 
         String host="smtp.gmail.com";
-        final String usuario="bryangallegoclases@gmail.com";//change accordingly
-        final String contraseña="250698tineo";//change accordingly
+        final String usuario=cuenta.getCuenta();//change accordingly
+        final String contraseña=cuenta.getPassword();//change accordingly
 
 
         //Compose the message
