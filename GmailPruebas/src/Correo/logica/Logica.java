@@ -216,21 +216,6 @@ public class Logica  {
 
     }
 
-    public void deleteMail(EmailsMensage mail, Folder folder, Cuenta mailAccount) {
-
-        Message m = mail.getMensaje();
-        try {
-            if (!folder.getName().equals("Papelera")) {
-                Folder papelera = folder.getStore().getDefaultFolder().getFolder("[Gmail]/Papelera");
-                folder.copyMessages(new Message[]{m}, papelera);
-            } else {
-                m.setFlag(Flags.Flag.DELETED, true);
-                folder.close(true);
-            }
-        } catch (MessagingException e) {
-            e.printStackTrace();
-        }
-    }
 }
 
 

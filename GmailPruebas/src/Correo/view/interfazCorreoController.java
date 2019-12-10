@@ -46,22 +46,6 @@ public class interfazCorreoController extends BaseController implements Initiali
     @FXML
     private WebView vistaEmail;
 
-    @FXML
-    void borrarCorreo(ActionEvent event) {
-
-
-            EmailTreeItem emailTreeItem = (EmailTreeItem)TreeView.getSelectionModel().getSelectedItem();
-            EmailsMensage email = tablaCorreos.getSelectionModel().getSelectedItem();
-            Folder folder = emailTreeItem.getFolder();
-            Cuenta mailAccount =emailTreeItem.getEmailAccount();
-
-            Logica.getInstance().deleteMail(email, folder, mailAccount);
-
-
-
-
-    }
-
     public void logearse() {
 
         cargarDialogo("login.fxml", 600, 450).abrirDialogo(true);
@@ -80,7 +64,7 @@ public class interfazCorreoController extends BaseController implements Initiali
         BaseController controller = cargarDialogo("correo.fxml", 800, 600);
         ((enviarController) controller).sender((EmailTreeItem)TreeView.getSelectionModel().getSelectedItem());
         controller.abrirDialogo(true);
-        cargarDialogo("correo.fxml", 800, 800).abrirDialogo(true);
+
     }
 
 
@@ -100,8 +84,8 @@ public class interfazCorreoController extends BaseController implements Initiali
 
         EmailsMensage mensaje = tablaCorreos.getSelectionModel().getSelectedItem();
         BaseController controller = cargarDialogo("correo.fxml", 800, 600);
-        ((enviarController) controller).sender((EmailTreeItem)TreeView.getSelectionModel().getSelectedItem());
-        ((enviarController) controller).responder(mensaje);
+        ((enviarController)  controller).sender((EmailTreeItem)TreeView.getSelectionModel().getSelectedItem());
+        ((enviarController)   controller).responder(mensaje);
         controller.abrirDialogo(true);
     }
 
