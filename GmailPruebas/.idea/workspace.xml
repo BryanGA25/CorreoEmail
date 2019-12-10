@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="613d663b-9643-49bb-adec-7170e0b99295" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/model/EmailTreeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/model/EmailTreeItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/enviarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/enviarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/correo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/correo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/login.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574338859263</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Responder, reenvia, &quot;Borrar no funcional&quot;, y mas cosas hechas.">
+      <created>1575936510360</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575936510360</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -188,6 +190,7 @@
     <MESSAGE value="Intento actualizar TableView" />
     <MESSAGE value="Ver TreeItem" />
     <MESSAGE value="Tree Item con Varios Correos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tree Item con Varios Correos" />
+    <MESSAGE value="Responder, reenvia, &quot;Borrar no funcional&quot;, y mas cosas hechas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Responder, reenvia, &quot;Borrar no funcional&quot;, y mas cosas hechas." />
   </component>
 </project>

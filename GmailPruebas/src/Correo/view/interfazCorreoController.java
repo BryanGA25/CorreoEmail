@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.util.Callback;
 import org.apache.commons.mail.util.MimeMessageParser;
@@ -85,8 +86,9 @@ public class interfazCorreoController extends BaseController implements Initiali
         EmailsMensage mensaje = tablaCorreos.getSelectionModel().getSelectedItem();
 
 
-        BaseController controller = cargarDialogo("correo.fxml", 500, 600);
+        BaseController controller = cargarDialogo("correo.fxml", 800, 600);
         ((enviarController) controller).reenviar(mensaje);
+        controller.abrirDialogo(true);
 
 
     }
@@ -94,7 +96,7 @@ public class interfazCorreoController extends BaseController implements Initiali
     public void responder(ActionEvent event) {
 
         EmailsMensage mensaje = tablaCorreos.getSelectionModel().getSelectedItem();
-        BaseController controller = cargarDialogo("correo.fxml", 500, 600);
+        BaseController controller = cargarDialogo("correo.fxml", 800, 600);
         ((enviarController) controller).responder(mensaje);
         controller.abrirDialogo(true);
     }
@@ -144,19 +146,24 @@ public class interfazCorreoController extends BaseController implements Initiali
         });
 
 
-        if (tablaCorreos.getSelectionModel() != null) {
+
+
             tablaCorreos.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<EmailsMensage>() {
                 @Override
                 public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
 
-                    MimeMessageParser mine = Logica.getInstance().getMimeMessageParser(t1.getMensaje());
-                    vistaEmail.getEngine().loadContent(mine.getHtmlContent());
+                    String mensaje = t1.getContenido();
+                    WebEngine webEngine = vistaEmail.getEngine();
+                    webEngine.loadContent(mensaje);
+
+                    /*MimeMessageParser mine = Logica.getInstance().getMimeMessageParser(t1.getMensaje());
+                    vistaEmail.getEngine().loadContent(mine.getHtmlContent());*/
                 }
 
 
             });
-        }
-        if (tablaCorreos.getSelectionModel() != null) {
+
+
             TreeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
                 @Override
                 public void changed(ObservableValue<? extends TreeItem<String>> observableValue, TreeItem<String> stringTreeItem, TreeItem<String> t1) {
@@ -182,6 +189,6 @@ public class interfazCorreoController extends BaseController implements Initiali
 
 
 
-    }
+
 
 
