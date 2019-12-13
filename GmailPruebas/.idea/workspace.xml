@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Correo/view/AsuntosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Correo/view/asuntos.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575575770612</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="EXAMEN ejercicio 2">
+      <created>1576249305244</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1576249305244</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +256,7 @@
     <MESSAGE value="enviar Correos y marcar los no leidos." />
     <MESSAGE value="&#10;mandar varias personas" />
     <MESSAGE value="cambios leves quedan muchas cosas" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios leves quedan muchas cosas" />
+    <MESSAGE value="EXAMEN ejercicio 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="EXAMEN ejercicio 2" />
   </component>
 </project>
