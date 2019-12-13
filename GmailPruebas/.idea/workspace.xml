@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="613d663b-9643-49bb-adec-7170e0b99295" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/correo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/correo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +30,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/ProyectAlvaro" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -171,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576014141733</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="&quot;Mejora&quot; en enviar">
+      <created>1576015046115</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576015046115</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -207,6 +212,7 @@
     <MESSAGE value="Tree Item con Varios Correos" />
     <MESSAGE value="Responder, reenvia, &quot;Borrar no funcional&quot;, y mas cosas hechas." />
     <MESSAGE value="Mejora en enviar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mejora en enviar" />
+    <MESSAGE value="&quot;Mejora&quot; en enviar" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Mejora&quot; en enviar" />
   </component>
 </project>

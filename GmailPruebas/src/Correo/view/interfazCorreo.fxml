@@ -59,7 +59,7 @@
                               <Button mnemonicParsing="false" onAction="#responder" text="Responder" />
                               <AnchorPane>
                                  <children>
-                                    <Button fx:id="borrar" mnemonicParsing="false" onAction="#borrarCorreo" prefHeight="26.0" prefWidth="59.0" text="Borrar" />
+                                    <Button fx:id="borrar" mnemonicParsing="false"  prefHeight="26.0" prefWidth="59.0" text="Borrar" />
                                  </children>
                               </AnchorPane>
                               <ComboBox fx:id="temas" prefWidth="150.0" />
