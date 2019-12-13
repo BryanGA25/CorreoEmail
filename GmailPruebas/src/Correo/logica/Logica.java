@@ -34,6 +34,10 @@ public class Logica  {
         treeItem= new EmailTreeItem("", null, null);
     }
 
+    public ObservableList<EmailsMensage> getListaCorreos() {
+        return listaCorreos;
+    }
+
     public void logearse(String user, String contraseña){
         this.user=user;
         this.contraseña=contraseña;

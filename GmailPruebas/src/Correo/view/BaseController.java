@@ -22,7 +22,7 @@ public class BaseController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxml));
             Parent root = fxmlLoader.load();
             BaseController controller = fxmlLoader.getController();
-            controller.cargarStage(root, "Alta Partido", anchura, altura);
+            controller.cargarStage(root, "Cliente Corre", anchura, altura);
             return controller;
         }catch(IOException e){
             e.printStackTrace();

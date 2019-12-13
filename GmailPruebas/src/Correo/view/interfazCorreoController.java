@@ -96,7 +96,14 @@ public class interfazCorreoController extends BaseController implements Initiali
 
     }
 
+    @FXML
+    private void verAsuntos(){
 
+        cargarDialogo("asuntos.fxml", 600, 600).abrirDialogo(true);
+
+    }
+
+    
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

@@ -59,10 +59,11 @@
                               <Button mnemonicParsing="false" onAction="#responder" text="Responder" />
                               <AnchorPane>
                                  <children>
-                                    <Button fx:id="borrar" mnemonicParsing="false"  prefHeight="26.0" prefWidth="59.0" text="Borrar" />
+                                    <Button fx:id="borrar" mnemonicParsing="false" prefHeight="26.0" prefWidth="59.0" text="Borrar" />
                                  </children>
                               </AnchorPane>
                               <ComboBox fx:id="temas" prefWidth="150.0" />
+                              <Button mnemonicParsing="false" onAction="#verAsuntos" text="Asunto" />
                           </items>
                         </ToolBar>
                         <WebView fx:id="vistaEmail" prefHeight="200.0" prefWidth="200.0" />
