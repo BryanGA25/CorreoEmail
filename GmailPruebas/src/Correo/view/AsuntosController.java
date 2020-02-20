@@ -25,14 +25,11 @@ public class AsuntosController extends  BaseController implements Initializable 
 
     @FXML
     void visualizar(ActionEvent event) {
-
-
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Información correo");
         alert.setHeaderText("Asunto");
         alert.setContentText(listaCorreos.get(correos.getSelectionModel().getSelectedIndex()).getAsunto());
         alert.show();
-
     }
 
 

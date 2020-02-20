@@ -15,6 +15,7 @@
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.web.WebView?>
+<?import paqueteComponente.Reloj?>
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="863.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Correo.view.interfazCorreoController">
   <tabs>
@@ -38,6 +39,11 @@
                                     <MenuItem mnemonicParsing="false" text="Desconectar" />
                               </items>
                             </Menu>
+                              <Menu mnemonicParsing="false" text="Alarmas">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Menu Alarmas" />
+                                 </items>
+                              </Menu>
                           </menus>
                         </MenuBar>
                         <TableView fx:id="tablaCorreos" prefHeight="251.0" prefWidth="727.0">
@@ -64,6 +70,7 @@
                               </AnchorPane>
                               <ComboBox fx:id="temas" prefWidth="150.0" />
                               <Button mnemonicParsing="false" onAction="#verAsuntos" text="Asunto" />
+                              <Reloj />
                           </items>
                         </ToolBar>
                         <WebView fx:id="vistaEmail" prefHeight="200.0" prefWidth="200.0" />

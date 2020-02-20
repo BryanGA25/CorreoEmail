@@ -18,6 +18,7 @@ public class Launcher extends Application {
         stage.setTitle("Pantalla Correo");
         stage.setScene(new Scene(root, 750, 750));
         stage.show();
+
     }
 
         public static void main(String[] args){

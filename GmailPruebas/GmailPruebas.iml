@@ -13,5 +13,6 @@
     <orderEntry type="library" name="activation" level="application" />
     <orderEntry type="library" name="org.apache.commons:commons-email:1.5" level="application" />
     <orderEntry type="library" name="org.testfx:testfx-junit:4.0.15-alpha" level="application" />
+    <orderEntry type="library" name="ProyectoReloj" level="project" />
   </component>
 </module>

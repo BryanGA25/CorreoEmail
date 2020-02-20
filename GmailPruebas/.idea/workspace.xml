@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ProyectoReloj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Correo/view/alarmas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Correo/view/alarmasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GmailPruebas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GmailPruebas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/AsuntosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/AsuntosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/BaseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,13 +40,14 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GmailPruebas" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="D:/AlvaroSegundaEvaluacion/ProyectoReloj/out/artifacts/ProyectoReloj_jar/ProyectoReloj.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DAM\Desktop\Correos\CorreoEmail\GmailPruebas\src\Correo\view" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo\view" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo\model" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo" />
@@ -224,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576249305244</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="EXAMEN ejercicio 2">
+      <created>1576250102899</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576250102899</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

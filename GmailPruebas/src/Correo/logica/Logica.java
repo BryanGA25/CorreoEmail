@@ -8,6 +8,8 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.TreeItem;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.util.MimeMessageParser;
+import paqueteComponente.Reloj;
+import paqueteComponente.Tarea;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -26,14 +28,22 @@ public class Logica  {
     private Properties props=new Properties();
     private ArrayList <Cuenta> cuentas=new ArrayList<>();
     private int cont=0;
-    private ObservableList<EmailsMensage> listaCorreos;
+        private ObservableList<EmailsMensage> listaCorreos;
     private EmailTreeItem treeItem;
+    private ObservableList<Tarea> listaTareas;
 
     public Logica(){
         listaCorreos = FXCollections.observableArrayList();
         treeItem= new EmailTreeItem("", null, null);
+        listaTareas=FXCollections.observableArrayList();
+    }
+    public void addTarea(Tarea tarea){
+        listaTareas.add(tarea);
     }
 
+    public ObservableList<Tarea> getListaTareas(){
+        return listaTareas;
+    }
 
 
     public void logearse(String user, String contraseña){
