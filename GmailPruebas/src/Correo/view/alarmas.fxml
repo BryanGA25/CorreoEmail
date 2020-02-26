@@ -9,26 +9,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Correo.view.alarmasController">
    <children>
-      <AnchorPane fx:id="crearAlarma" prefHeight="446.0" prefWidth="600.0">
+      <AnchorPane prefHeight="446.0" prefWidth="600.0">
          <children>
             <Label layoutX="126.0" layoutY="26.0" prefHeight="17.0" prefWidth="83.0" text="Hora Alarma:" AnchorPane.rightAnchor="391.0" AnchorPane.topAnchor="26.0" />
             <Label layoutX="126.0" layoutY="76.0" prefHeight="17.0" prefWidth="83.0" text="Dia Alarma:" AnchorPane.rightAnchor="391.0" AnchorPane.topAnchor="76.0" />
-            <TextField fx:id="horaAlarma" layoutX="230.0" layoutY="22.0" prefHeight="25.0" prefWidth="198.0" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="22.0" />
+            <TextField fx:id="horaAlarma" layoutX="230.0" layoutY="22.0" prefHeight="25.0" prefWidth="198.0" promptText="h:m:s" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="22.0" />
             <DatePicker fx:id="diaAlarma" layoutX="230.0" layoutY="72.0" prefHeight="25.0" prefWidth="198.0" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="72.0" />
-            <Button fx:id="crearAlarma" layoutX="472.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Crear Alarma" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="131.0" />
+            <Button fx:id="crearAlarma" layoutX="472.0" layoutY="131.0" mnemonicParsing="false" onAction="#añadirTarea" prefHeight="25.0" prefWidth="103.0" text="Crear Alarma" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="131.0" />
             <TableView fx:id="tablaAlarmas" layoutX="12.0" layoutY="164.0" prefHeight="209.0" prefWidth="576.0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="164.0">
               <columns>
-                <TableColumn prefWidth="175.0" text="Hora" />
-                <TableColumn prefWidth="185.0" text="Fecha" />
-                  <TableColumn prefWidth="215.0" text="Mensaje" />
+                <TableColumn prefWidth="175.0" text="Hora" >
+                  <cellValueFactory><PropertyValueFactory property="hora" /></cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="185.0" text="Fecha" >
+                    <cellValueFactory><PropertyValueFactory property="dia" /></cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="215.0" text="Alerta" >
+                      <cellValueFactory><PropertyValueFactory property="alerta" /></cellValueFactory>
+                  </TableColumn>
               </columns>
             </TableView>
             <TextField fx:id="mensaje" layoutX="230.0" layoutY="118.0" prefHeight="25.0" prefWidth="198.0" />
-            <Label layoutX="126.0" layoutY="123.0" prefHeight="17.0" prefWidth="83.0" text="Mensaje" />
-            <Button fx:id="borrarAlarma" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Borrar Alarma" />
+            <Label layoutX="126.0" layoutY="123.0" prefHeight="17.0" prefWidth="83.0" text="Alerta" />
+            <Button fx:id="borrarAlarma" layoutX="22.0" layoutY="128.0" mnemonicParsing="false" onAction="#borrarAlarma" prefHeight="25.0" prefWidth="90.0" text="Borrar Alarma" />
          </children>
       </AnchorPane>
    </children>

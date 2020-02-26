@@ -41,7 +41,7 @@
                             </Menu>
                               <Menu mnemonicParsing="false" text="Alarmas">
                                  <items>
-                                    <MenuItem mnemonicParsing="false" text="Menu Alarmas" />
+                                    <MenuItem mnemonicParsing="false" onAction="#menuAlarmas" text="Menu Alarmas" />
                                  </items>
                               </Menu>
                           </menus>

@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 
-public class alarmasController implements Initializable {
+public class alarmasController extends BaseController implements  Initializable{
     @FXML
     private Button crearAlarma;
 
@@ -36,6 +36,7 @@ public class alarmasController implements Initializable {
 
     private ObservableList<Tarea> listaTaras;
 
+    @FXML
     private  void añadirTarea(){
 
         String alarma=horaAlarma.getText();
@@ -60,6 +61,10 @@ public class alarmasController implements Initializable {
 
         listaTaras=Logica.getInstance().getListaTareas();
         tablaAlarmas.setItems(listaTaras);
+    }
+
+    public void borrarAlarma(){
+        listaTaras.remove(listaTaras.get(tablaAlarmas.getSelectionModel().getFocusedIndex()));
     }
 
 

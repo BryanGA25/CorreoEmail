@@ -60,6 +60,10 @@ public class interfazCorreoController extends BaseController implements Initiali
 
     }
 
+    public void menuAlarmas(){
+        cargarDialogo("alarmas.fxml",600,450).abrirDialogo(true);
+    }
+
     public void enviar() {
 
         BaseController controller = cargarDialogo("correo.fxml", 800, 600);
