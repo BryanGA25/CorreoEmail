@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/alarmas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/alarmas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/alarmasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/alarmasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
-    </list>
+    <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582228335030</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Reloj Completo">
+      <created>1582741660452</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1582741660452</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,6 +279,7 @@
     <MESSAGE value="cambios leves quedan muchas cosas" />
     <MESSAGE value="EXAMEN ejercicio 2" />
     <MESSAGE value="Añadir cosas componentes Reloj" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir cosas componentes Reloj" />
+    <MESSAGE value="Reloj Completo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reloj Completo" />
   </component>
 </project>
