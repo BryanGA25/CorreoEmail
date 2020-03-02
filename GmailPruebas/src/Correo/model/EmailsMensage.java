@@ -18,7 +18,7 @@ public class EmailsMensage{
 
 
     public String getContenido(){
-        MimeMessageParser parser = new MimeMessageParser((MimeMessage) mensaje      );
+        MimeMessageParser parser = new MimeMessageParser((MimeMessage) mensaje);
         try {
             parser.parse();
             if(parser.getHtmlContent() != null){

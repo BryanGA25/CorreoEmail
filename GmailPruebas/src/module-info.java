@@ -8,6 +8,8 @@ module GmailPruebas {
     requires javafx.web;
     requires commons.email;
     requires ProyectoReloj;
+    requires jasperreports;
+    requires java.sql;
 
     exports Correo.view;
     exports Correo.model;

@@ -44,6 +44,13 @@
                                     <MenuItem mnemonicParsing="false" onAction="#menuAlarmas" text="Menu Alarmas" />
                                  </items>
                               </Menu>
+                              <Menu mnemonicParsing="false" text="Informes">
+                                <items>
+                                  <MenuItem fx:id="informeUnico" mnemonicParsing="false" onAction="#generarInformeUnico" text="Informe Unico" />
+                                    <MenuItem fx:id="informeMultiple" mnemonicParsing="false" onAction="#generarInformeMultiple" text="Informe Multiple" />
+                                    <MenuItem fx:id="informeAgrupado" mnemonicParsing="false" onAction="#generarInformeAgrupado" text="Informes Agrupados" />
+                                </items>
+                              </Menu>
                           </menus>
                         </MenuBar>
                         <TableView fx:id="tablaCorreos" prefHeight="251.0" prefWidth="727.0">

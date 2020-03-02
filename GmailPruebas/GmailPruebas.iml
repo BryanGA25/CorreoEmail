@@ -15,5 +15,7 @@
     <orderEntry type="library" name="org.testfx:testfx-junit:4.0.15-alpha" level="application" />
     <orderEntry type="library" name="ProyectoReloj" level="project" />
     <orderEntry type="library" name="commons-email-1.5" level="application" />
+    <orderEntry type="library" name="net.sf.jasperreports:jasperreports:6.11.0" level="application" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.18-bin" level="application" />
   </component>
 </module>

@@ -17,14 +17,18 @@ import javafx.scene.control.*;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.util.Callback;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.apache.commons.mail.util.MimeMessageParser;
 
 import javax.mail.Folder;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
+import java.util.*;
 
 
 public class interfazCorreoController extends BaseController implements Initializable {
@@ -71,7 +75,54 @@ public class interfazCorreoController extends BaseController implements Initiali
         controller.abrirDialogo(true);
 
     }
+    @FXML
+    void generarInformeAgrupado(ActionEvent event) {
 
+    }
+
+    @FXML
+    void generarInformeMultiple(ActionEvent event) {
+        List<EmailsMensage> listaEmails = new ArrayList<>();
+        for (EmailsMensage e:tablaCorreos.getItems()) {
+            listaEmails.add(e);
+        }
+        if (!listaEmails.isEmpty()){
+            try {
+
+                JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(listaEmails); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
+                Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
+                JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream("jasper/CorreoInformes.jasper"), parametros, jr);
+                JasperExportManager.exportReportToPdfFile(print, "InformeMultiple.pdf");
+            } catch (JRException e) {
+                e.printStackTrace();
+            }
+        }else {
+            Alert alerta= new Alert(Alert.AlertType.WARNING);
+            alerta.setContentText("No hay datos en la tabla para mostrar");
+            alerta.showAndWait();
+        }
+    }
+
+    @FXML
+    void generarInformeUnico(ActionEvent event) {
+        if (tablaCorreos.getSelectionModel().isEmpty()!=true){
+            try {
+                List<EmailsMensage> listaEmails = new ArrayList<>();
+                listaEmails.add(tablaCorreos.getSelectionModel().getSelectedItem());
+                JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(listaEmails); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
+                Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
+                JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream("jasper/CorreoInformes.jasper"), parametros, jr);
+                JasperExportManager.exportReportToPdfFile(print, "InformeUnico.pdf");
+            } catch (JRException e) {
+                e.printStackTrace();
+            }
+        }else {
+            Alert alerta= new Alert(Alert.AlertType.WARNING);
+            alerta.setContentText("No hay un correo seleccionado");
+            alerta.showAndWait();
+        }
+
+    }
 
     public void reenviar(ActionEvent event) {
 
