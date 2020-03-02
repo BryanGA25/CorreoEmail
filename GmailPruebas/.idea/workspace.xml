@@ -6,20 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Informes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Informes/Informes.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Informes/src/informes/EmailsMensage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Informes/src/informes/FactoryMensajes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Informes/src/informes/Prueba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GmailPruebas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GmailPruebas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
-    </list>
+    <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582804798701</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Primeros Informes Listos">
+      <created>1583108704014</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1583108704014</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -328,6 +322,7 @@
     <MESSAGE value="Añadir cosas componentes Reloj" />
     <MESSAGE value="Reloj Completo" />
     <MESSAGE value="Reloj Completo Perfecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reloj Completo Perfecto" />
+    <MESSAGE value="Primeros Informes Listos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primeros Informes Listos" />
   </component>
 </project>
