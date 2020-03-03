@@ -37,6 +37,7 @@ public class interfazCorreoController extends BaseController implements Initiali
 
     ArrayList<Cuenta> cuentas = new ArrayList<>();
     TreeItem raiz;
+
     private MimeMessage mime;
 
 
@@ -57,7 +58,11 @@ public class interfazCorreoController extends BaseController implements Initiali
 
         cuentas = Logica.getInstance().getCuentas();
         raiz = Logica.getInstance().getTree();
+        for(Object child: raiz.getChildren()){
+            expandTreeView((TreeItem<String>) child);
+        }
         TreeView.setRoot(raiz);
+
 
         TreeView.setShowRoot(false);
         cargarTabla();
@@ -77,6 +82,38 @@ public class interfazCorreoController extends BaseController implements Initiali
     }
     @FXML
     void generarInformeAgrupado(ActionEvent event) {
+
+        List<EmailsMensage> listaEmails= new ArrayList<>();
+
+        for(int i=1; i<TreeView.getExpandedItemCount();i++){
+            if (TreeView.getTreeItem(i).getValue().equalsIgnoreCase("INBOX")) {
+                listaEmails.addAll(Logica.getInstance().getListaCorreos(TreeView.getTreeItem(i).getValue()));
+            } else {
+                if (i!=2) {
+                    String carpeta = "[Gmail]/" + TreeView.getTreeItem(i).getValue();
+                    listaEmails.addAll(Logica.getInstance().getListaCorreos(carpeta));
+                }
+            }
+        }
+        if (!listaEmails.isEmpty()){
+            try {
+
+                JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(listaEmails); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
+                Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
+                JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream("jasper/InformeAgrupado.jasper"), parametros, jr);
+                JasperExportManager.exportReportToPdfFile(print, "InformeAgrupado.pdf");
+            } catch (JRException e) {
+                e.printStackTrace();
+            }
+        }else {
+            Alert alerta= new Alert(Alert.AlertType.WARNING);
+            alerta.setContentText("No hay correos para mostrar");
+            alerta.showAndWait();
+        }
+
+
+
+    //cargarDialogo("informesCuenta.fxml",800,600).abrirDialogo(true);
 
     }
 
@@ -230,6 +267,15 @@ public class interfazCorreoController extends BaseController implements Initiali
 
             });
         }
+
+    private void expandTreeView(TreeItem<?> item){
+        if(item != null && !item.isLeaf()){
+            item.setExpanded(true);
+            for(TreeItem<?> child:item.getChildren()){
+                expandTreeView(child);
+            }
+        }
+    }
     }
 
 

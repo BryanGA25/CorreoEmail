@@ -15,7 +15,15 @@ public class EmailsMensage{
     private String asunto;
     private String remitente;
     private Date fecha;
+    private String carpeta;
 
+
+    public String getCarpeta(){
+
+        carpeta=mensaje.getFolder().getName();
+
+        return carpeta;
+    }
 
     public String getContenido(){
         MimeMessageParser parser = new MimeMessageParser((MimeMessage) mensaje);

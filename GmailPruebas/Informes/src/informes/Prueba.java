@@ -18,7 +18,7 @@ public class Prueba {
         try {
             JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(FactoryMensajes.createListMensaje(),false); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
             Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
-            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream("jasper/CorreoInformes.jasper"), parametros, jr);
+            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream("CorreoInformes.jasper"), parametros, jr);
             JasperExportManager.exportReportToPdfFile(print, "informes/primerinforme.pdf");
         } catch (JRException e) {
             e.printStackTrace();

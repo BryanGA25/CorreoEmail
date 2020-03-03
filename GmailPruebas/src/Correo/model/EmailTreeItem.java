@@ -8,7 +8,7 @@ public class EmailTreeItem extends TreeItem<String> {
 
     private String nombre;
     private Cuenta emailAccount;
-    private static Folder folder;
+    private  Folder folder;
 
     public EmailTreeItem(String nombre, Cuenta   emailAccount, Folder folder) {
         super(nombre);
@@ -18,7 +18,7 @@ public class EmailTreeItem extends TreeItem<String> {
     }
 
 
-    public static Folder getFolder() {
+    public Folder getFolder() {
         return folder;
     }
 

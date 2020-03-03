@@ -9,21 +9,14 @@ public class EmailsMensage {
     private String remitente;
     private String contenido;
     private Date fecha;
+    private String carpeta;
 
-
-    public EmailsMensage(String asunto, String remitente, Date fecha,String contenido) {
+    public EmailsMensage(String asunto, String remitente, Date fecha,String carpeta) {
         this.asunto = asunto;
         this.remitente = remitente;
         this.fecha = fecha;
-        this.contenido = contenido;
+        this.carpeta=carpeta;
 
-    }
-    public String getContenido() {
-        return contenido;
-    }
-
-    public void setContenido(String contenido) {
-        this.contenido = contenido;
     }
     public String getAsunto() {
         return asunto;
@@ -47,6 +40,14 @@ public class EmailsMensage {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+
+    public String getCarpeta() {
+        return carpeta;
+    }
+
+    public void setCarpeta(String carpeta) {
+        this.carpeta = carpeta;
     }
 }
 
