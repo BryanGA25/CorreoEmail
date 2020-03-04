@@ -82,7 +82,7 @@ public class Logica  {
         treeItem.getChildren().add(crearTreeView(cuenta, f));
 
     }
-    public Folder loadMail(Cuenta mailAccount){
+    private Folder loadMail(Cuenta mailAccount){
         try {
             props = new Properties();
             props.put("mail.imap.ssl.checkserveridentity", "false");
@@ -138,7 +138,8 @@ public class Logica  {
         return emailroot;
 
     }
-    public void getFolders(Folder[] folders,EmailTreeItem objeto,Cuenta cuenta) {
+
+    private void getFolders(Folder[] folders,EmailTreeItem objeto,Cuenta cuenta) {
         for (Folder folder : folders) {
             EmailTreeItem emailTreeItem = new EmailTreeItem(folder.getName(),cuenta  , folder);
             objeto.getChildren().add(emailTreeItem);

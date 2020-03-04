@@ -2,21 +2,27 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Informes" />
+      <artifact name="InformesJasper:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="Tercer Informe Listo(Solo permite tener un Email conectado)">
-      <change afterPath="$PROJECT_DIR$/src/Correo/view/jasper/CorreoInformes.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Correo/view/jasper/InformeAgrupado.jasper" afterDir="false" />
+    <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/GmailPruebas_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/InformesJasper_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InformesJasper/InformesJasper.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ayudaApp/Logearse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ayudaApp/PrimerPaso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ayudaApp/index.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ayudaApp/primerpaso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ProyectoReloj.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ProyectoReloj.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informes/src/informes/EmailsMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Informes/src/informes/EmailsMensage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informes/src/informes/FactoryMensajes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Informes/src/informes/FactoryMensajes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informes/src/informes/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/Informes/src/informes/Prueba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GmailPruebas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GmailPruebas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/model/EmailTreeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/model/EmailTreeItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/model/EmailsMensage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/alarmas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/alarmas.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/jasper/CorreoInformes.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/jasper/CorreoInformes.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/jasper/InformeAgrupado.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/jasper/InformeAgrupado.jasper" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,33 +44,32 @@
   <component name="ProjectId" id="1T9mHvz0qkOnpIMacGq6mLpukr2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Correo/view/jasper" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ayudaApp" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\Informes\src\informes" />
+      <recent name="C:\Users\DAM\Desktop\Correos\CorreoEmail\GmailPruebas\src\Correo\view\jasper" />
       <recent name="C:\Users\DAM\Desktop\Correos\CorreoEmail\GmailPruebas\src\Correo\view" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo\view" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo\model" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="informes" />
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\src\Correo\view\jasper" />
-      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\Informes\src\informes\jasper" />
-      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\src\Correo\jasper" />
+      <recent name="C:\Users\DAM\Desktop\Correos\CorreoEmail\GmailPruebas\src\ayudaApp" />
+      <recent name="C:\Users\DAM\Desktop\Correos\CorreoEmail\GmailPruebas\src" />
+      <recent name="C:\Users\DAM\Desktop\Correos\CorreoEmail\GmailPruebas\InformesJasper\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,19 +98,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="informes.Prueba" />
-      <module name="Informes" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="informes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="leerGmail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Correo.leerGmail" />
       <module name="GmailPruebas" />
@@ -122,7 +114,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Launcher" />
-        <item itemvalue="Application.Prueba" />
         <item itemvalue="Application.leerGmail" />
       </list>
     </recent_temporary>
@@ -285,28 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582741660452</updated>
     </task>
-    <task id="LOCAL-00022" summary="Reloj Completo Perfecto">
-      <created>1582804798701</created>
+    <task id="LOCAL-00022" summary="Reloj Completo">
+      <created>1582741840740</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1582804798701</updated>
+      <updated>1582741840740</updated>
     </task>
-    <task id="LOCAL-00023" summary="Primeros Informes Listos">
-      <created>1583108704014</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1583108704014</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Primeros Informes Listos">
-      <created>1583108711349</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1583108711349</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,9 +318,6 @@
     <MESSAGE value="EXAMEN ejercicio 2" />
     <MESSAGE value="Añadir cosas componentes Reloj" />
     <MESSAGE value="Reloj Completo" />
-    <MESSAGE value="Reloj Completo Perfecto" />
-    <MESSAGE value="Primeros Informes Listos" />
-    <MESSAGE value="Tercer Informe Listo(Solo permite tener un Email conectado)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tercer Informe Listo(Solo permite tener un Email conectado)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reloj Completo" />
   </component>
 </project>

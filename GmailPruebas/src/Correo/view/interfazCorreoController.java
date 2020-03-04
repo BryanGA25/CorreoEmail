@@ -89,12 +89,16 @@ public class interfazCorreoController extends BaseController implements Initiali
             if (TreeView.getTreeItem(i).getValue().equalsIgnoreCase("INBOX")) {
                 listaEmails.addAll(Logica.getInstance().getListaCorreos(TreeView.getTreeItem(i).getValue()));
             } else {
-                if (i!=2) {
+                if (!TreeView.getTreeItem(i).getValue().equalsIgnoreCase("[Gmail]")) {
                     String carpeta = "[Gmail]/" + TreeView.getTreeItem(i).getValue();
                     listaEmails.addAll(Logica.getInstance().getListaCorreos(carpeta));
                 }
             }
         }
+
+
+
+
         if (!listaEmails.isEmpty()){
             try {
 
