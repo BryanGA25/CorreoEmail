@@ -10,6 +10,7 @@ module GmailPruebas {
     requires ProyectoReloj;
     requires jasperreports;
     requires java.sql;
+    requires org.docgene.help.jfx;
 
     exports Correo.view;
     exports Correo.model;

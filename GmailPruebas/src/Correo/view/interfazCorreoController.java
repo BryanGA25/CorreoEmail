@@ -5,6 +5,8 @@ import Correo.model.Cuenta;
 
 import Correo.model.EmailTreeItem;
 import Correo.model.EmailsMensage;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -16,17 +18,25 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 import javafx.util.Callback;
+import javafx.util.Duration;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import org.docgene.help.JavaHelpFactory;
+import org.docgene.help.gui.jfx.JFXHelpContentViewer;
 import org.apache.commons.mail.util.MimeMessageParser;
+import paqueteComponente.OnTimeArrive;
+import paqueteComponente.Reloj;
+import paqueteComponente.Tarea;
 
 import javax.mail.Folder;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.io.File;
 import java.net.URL;
 import java.util.*;
 
@@ -39,8 +49,11 @@ public class interfazCorreoController extends BaseController implements Initiali
     TreeItem raiz;
 
     private MimeMessage mime;
+    private Reloj reloj= new Reloj();
+    private JFXHelpContentViewer viewer;
 
-
+    @FXML
+    private Button ayuda;
     @FXML
     ComboBox<String> temas;
     @FXML
@@ -200,9 +213,29 @@ public class interfazCorreoController extends BaseController implements Initiali
 
     }
 
-    
+    private void initializeHelp(Stage stage)
+    {
+        try {
+            URL url = new File("outAyudaApp/articles.zip").toURI().toURL();
+            JavaHelpFactory factory = new JavaHelpFactory(url);
+            factory.create();
+            viewer = new JFXHelpContentViewer();
+            factory.install(viewer);
+            viewer.getHelpWindow(stage, "Help Content", 600, 700);
+        }catch (Throwable e)
+        {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void iniciarAyuda(){
+        viewer.showHelpDialog(ayuda);
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        initializeHelp(getStage());
 
         temas.setPromptText("Estilos");
         temas.getItems().addAll(Application.STYLESHEET_MODENA, Application.STYLESHEET_CASPIAN);
@@ -239,7 +272,6 @@ public class interfazCorreoController extends BaseController implements Initiali
 
 
 
-
             tablaCorreos.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<EmailsMensage>() {
                 @Override
                 public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
@@ -270,7 +302,9 @@ public class interfazCorreoController extends BaseController implements Initiali
                 }
 
             });
+
         }
+
 
     private void expandTreeView(TreeItem<?> item){
         if(item != null && !item.isLeaf()){

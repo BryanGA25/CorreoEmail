@@ -34,7 +34,7 @@ public class alarmasController extends BaseController implements  Initializable{
     @FXML
     private Button borrarAlarma;
 
-    private ObservableList<Tarea> listaTaras;
+    private ObservableList<Tarea> listaTareas;
 
     @FXML
     private  void añadirTarea(){
@@ -59,17 +59,19 @@ public class alarmasController extends BaseController implements  Initializable{
 
     public void cargarTabla(){
 
-        listaTaras=Logica.getInstance().getListaTareas();
-        tablaAlarmas.setItems(listaTaras);
+        listaTareas=Logica.getInstance().getListaTareas();
+        tablaAlarmas.setItems(listaTareas);
     }
 
     public void borrarAlarma(){
-        listaTaras.remove(listaTaras.get(tablaAlarmas.getSelectionModel().getFocusedIndex()));
+        listaTareas.remove(listaTareas.get(tablaAlarmas.getSelectionModel().getFocusedIndex()));
+        Logica.getInstance().borrarTarea(tablaAlarmas.getSelectionModel().getSelectedIndex());
     }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cargarTabla();
+
     }
 }

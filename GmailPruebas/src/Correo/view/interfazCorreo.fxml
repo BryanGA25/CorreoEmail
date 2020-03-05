@@ -76,7 +76,7 @@
                                  </children>
                               </AnchorPane>
                               <ComboBox fx:id="temas" prefWidth="150.0" />
-                              <Button mnemonicParsing="false" onAction="#verAsuntos" text="Asunto" />
+                              <Button fx:id="ayuda" mnemonicParsing="false" onAction="#iniciarAyuda" text="Ayuda" />
                               <Reloj />
                           </items>
                         </ToolBar>

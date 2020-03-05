@@ -40,6 +40,9 @@ public class Logica  {
     public void addTarea(Tarea tarea){
         listaTareas.add(tarea);
     }
+    public void borrarTarea(int indice){
+        listaTareas.remove(indice);
+    }
 
     public ObservableList<Tarea> getListaTareas(){
         return listaTareas;

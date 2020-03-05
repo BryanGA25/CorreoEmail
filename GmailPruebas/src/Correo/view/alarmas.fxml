@@ -25,10 +25,10 @@
                   <cellValueFactory><PropertyValueFactory property="hora" /></cellValueFactory>
                 </TableColumn>
                 <TableColumn prefWidth="185.0" text="Fecha">
-                    <cellValueFactory><PropertyValueFactory property="hora" /></cellValueFactory>
+                    <cellValueFactory><PropertyValueFactory property="dia" /></cellValueFactory>
                 </TableColumn>
                   <TableColumn prefWidth="215.0" text="Alerta">
-                      <cellValueFactory><PropertyValueFactory property="hora" /></cellValueFactory>
+                      <cellValueFactory><PropertyValueFactory property="alerta" /></cellValueFactory>
                   </TableColumn>
               </columns>
             </TableView>

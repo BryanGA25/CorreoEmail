@@ -16,5 +16,6 @@
     <orderEntry type="library" name="ProyectoReloj" level="project" />
     <orderEntry type="library" name="commons-email-1.5" level="application" />
     <orderEntry type="library" name="net.sf.jasperreports:jasperreports:6.11.0" level="application" />
+    <orderEntry type="library" name="docGeneJFXHelp" level="application" />
   </component>
 </module>
