@@ -49,7 +49,7 @@ public class interfazCorreoController extends BaseController implements Initiali
     TreeItem raiz;
 
     private MimeMessage mime;
-    private Reloj reloj= new Reloj();
+
     private JFXHelpContentViewer viewer;
 
     @FXML

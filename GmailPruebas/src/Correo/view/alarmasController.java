@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.util.Callback;
+import paqueteComponente.OnTimeArrive;
+import paqueteComponente.Reloj;
 import paqueteComponente.Tarea;
 
 import java.net.URL;
@@ -16,6 +18,9 @@ import java.util.ResourceBundle;
 
 
 public class alarmasController extends BaseController implements  Initializable{
+
+    private Reloj reloj;
+
     @FXML
     private Button crearAlarma;
 
@@ -49,12 +54,23 @@ public class alarmasController extends BaseController implements  Initializable{
 
 
         Tarea tarea=new Tarea(mensaje.getText(),localTime,date);
+        System.out.println(tarea.getDia().toString());
+        reloj.nuevaTarea(tarea);
+
         Logica.getInstance().addTarea(tarea);
 
         diaAlarma.getEditor().setText("");
         horaAlarma.setText("");
         mensaje.setText("");
         cargarTabla();
+        reloj.setOnTimeArrive(new OnTimeArrive() {
+            @Override
+            public void añadirTarea(Tarea tarea) {
+                Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText(tarea.getAlerta());
+                alert.show();
+            }
+        });
     }
 
     public void cargarTabla(){
@@ -72,6 +88,6 @@ public class alarmasController extends BaseController implements  Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cargarTabla();
-
+        reloj=Logica.getInstance().getReloj();
     }
 }

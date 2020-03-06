@@ -28,14 +28,20 @@ public class Logica  {
     private Properties props=new Properties();
     private ArrayList <Cuenta> cuentas=new ArrayList<>();
     private int cont=0;
-        private ObservableList<EmailsMensage> listaCorreos;
+    private ObservableList<EmailsMensage> listaCorreos;
     private EmailTreeItem treeItem;
     private ObservableList<Tarea> listaTareas;
+    private Reloj reloj;
 
     public Logica(){
         listaCorreos = FXCollections.observableArrayList();
         treeItem= new EmailTreeItem("", null, null);
         listaTareas=FXCollections.observableArrayList();
+        reloj=new Reloj();
+
+    }
+    public Reloj getReloj() {
+        return reloj;
     }
     public void addTarea(Tarea tarea){
         listaTareas.add(tarea);
