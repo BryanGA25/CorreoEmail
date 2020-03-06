@@ -1,15 +1,11 @@
 <article id="segundoPaso" desc="sengudosPasos">
-    Ahora para enviar correos, deberemos de
+    Ahora para enviar correos, deberemos de seleccionar una carpeta de nuestro correo para poder mandar un email
 
-    <br/>
-    <img id="primero" width="600"/>
-    <img id="segunda" width="200"/>
+    <img id="cuarta" width="600"/>
 
-    Deberemos de escribir nuestra cuenta de correo electronico,tener en cuenta que solo funciona con gmail.
-    <img id="tercera" width="400"/>
-
-
-    á é í ó ú  Ñ É ñ
+    Una vez, tengamos listo el correo que queremos mandar, hay que tener en cuenta que para que se añada el destinatario,
+    deberemos de hacer click en "Añadir destinatario".
+    <img id="quinta" width="400"/>
 
 
 </article>

@@ -7,12 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ayudaApp/Enviar1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ayudaApp/Enviar2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ayudaApp/enviarCorreo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GmailPruebas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GmailPruebas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformesJasper/InformesJasper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/InformesJasper/InformesJasper.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/alarmasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/alarmasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ayudaApp/pantallaCorreo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ayudaApp/primerpaso.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ayudaApp/segundaGuia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ayudaApp/segundaGuia.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,26 +42,27 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="F:/DESIM/DOCGENFX/json.jar!/" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ayudaApp" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.3882353" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\ayudaApp" />
+      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\src\Correo\view\jasper" />
+      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\Informes\src\informes\jasper" />
+      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\src\Correo\jasper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="informes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\Informes\src\informes" />
       <recent name="C:\Users\DAM\Desktop\Correos\CorreoEmail\GmailPruebas\src\Correo\view" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo\view" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo\model" />
       <recent name="C:\Users\DAM\Desktop\GmailPruebas\src\Correo" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="informes" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\src\Correo\view\jasper" />
-      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\Informes\src\informes\jasper" />
-      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\src\Correo\jasper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -316,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583413405144</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Arreglo en reloj">
+      <created>1583453020133</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1583453020133</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -355,6 +364,7 @@
     <MESSAGE value="Primeros Informes Listos" />
     <MESSAGE value="Tercer Informe Listo(Solo permite tener un Email conectado)" />
     <MESSAGE value="Un poco de help" />
-    <option name="LAST_COMMIT_MESSAGE" value="Un poco de help" />
+    <MESSAGE value="Arreglo en reloj" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglo en reloj" />
   </component>
 </project>
