@@ -1,5 +1,5 @@
 <article id="primerPaso" desc="primerospasos">
-    El primer paso será conectarnos a nuestra cuenta:
+    El primer paso sera conectarnos a nuestra cuenta:
 
     <br/>
     <img id="primero" width="600"/>
@@ -9,7 +9,6 @@
     <img id="tercera" width="400"/>
 
 
-    á é í ó ú  Ñ É ñ
-
-
+    <cat id="Articulos"/>
+    <cat id="Logearse"/>
 </article>

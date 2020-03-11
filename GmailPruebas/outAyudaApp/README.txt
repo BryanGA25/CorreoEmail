@@ -1,1 +1,1 @@
-Help content generated for JavaFX
+Help content generated for Swing

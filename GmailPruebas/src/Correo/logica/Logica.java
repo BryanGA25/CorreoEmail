@@ -6,15 +6,12 @@ import Correo.model.EmailsMensage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TreeItem;
-import org.apache.commons.mail.Email;
 import org.apache.commons.mail.util.MimeMessageParser;
 import paqueteComponente.Reloj;
 import paqueteComponente.Tarea;
-
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import java.time.chrono.MinguoChronology;
 import java.util.ArrayList;
 import java.util.Properties;
 

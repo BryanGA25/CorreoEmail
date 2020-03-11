@@ -5,11 +5,13 @@
       <element id="archive" name="GmailPruebas.jar">
         <element id="module-output" name="GmailPruebas" />
       </element>
-      <element id="library" level="project" name="ProyectoReloj" />
-      <element id="library" level="application" name="JavaFX13" />
+      <element id="library" level="application" name="JavaFX" />
       <element id="library" level="application" name="org.apache.commons:commons-email:1.5" />
-      <element id="library" level="application" name="activation" />
-      <element id="library" level="application" name="org.testfx:testfx-junit:4.0.15-alpha" />
+      <element id="library" level="project" name="ProyectoReloj" />
+      <element id="library" level="application" name="emails" />
+      <element id="library" level="application" name="DOCGENFX" />
+      <element id="library" level="application" name="net.sf.jasperreports:jasperreports:6.11.0" />
+      <element id="library" level="application" name="commons-email-1.5" />
     </root>
   </artifact>
 </component>

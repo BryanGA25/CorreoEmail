@@ -4,11 +4,9 @@ import Correo.logica.Logica;
 import Correo.model.Cuenta;
 import Correo.model.EmailTreeItem;
 import Correo.model.EmailsMensage;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TreeItem;
 import javafx.scene.web.HTMLEditor;
 
 import java.net.URL;

@@ -5,22 +5,18 @@ import Correo.model.Cuenta;
 
 import Correo.model.EmailTreeItem;
 import Correo.model.EmailsMensage;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import javafx.util.Duration;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -28,13 +24,6 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.docgene.help.JavaHelpFactory;
 import org.docgene.help.gui.jfx.JFXHelpContentViewer;
-import org.apache.commons.mail.util.MimeMessageParser;
-import paqueteComponente.OnTimeArrive;
-import paqueteComponente.Reloj;
-import paqueteComponente.Tarea;
-
-import javax.mail.Folder;
-import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.io.File;
 import java.net.URL;
@@ -117,7 +106,7 @@ public class interfazCorreoController extends BaseController implements Initiali
 
                 JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(listaEmails); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
                 Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
-                JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream("jasper/InformeAgrupado.jasper"), parametros, jr);
+                JasperPrint print = JasperFillManager.fillReport(String.valueOf(new File("jasper/InformeAgrupado.jasper")), parametros, jr);
                 JasperExportManager.exportReportToPdfFile(print, "InformeAgrupado.pdf");
             } catch (JRException e) {
                 e.printStackTrace();
@@ -145,7 +134,7 @@ public class interfazCorreoController extends BaseController implements Initiali
 
                 JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(listaEmails); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
                 Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
-                JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream("jasper/CorreoInformes.jasper"), parametros, jr);
+                JasperPrint print = JasperFillManager.fillReport(String.valueOf(new File("jasper/CorreoInformes.jasper")), parametros, jr);
                 JasperExportManager.exportReportToPdfFile(print, "InformeMultiple.pdf");
             } catch (JRException e) {
                 e.printStackTrace();
@@ -165,7 +154,7 @@ public class interfazCorreoController extends BaseController implements Initiali
                 listaEmails.add(tablaCorreos.getSelectionModel().getSelectedItem());
                 JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(listaEmails); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
                 Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
-                JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream("jasper/CorreoInformes.jasper"), parametros, jr);
+                JasperPrint print = JasperFillManager.fillReport(String.valueOf(new File("jasper/CorreoInformes.jasper")), parametros, jr);
                 JasperExportManager.exportReportToPdfFile(print, "InformeUnico.pdf");
             } catch (JRException e) {
                 e.printStackTrace();

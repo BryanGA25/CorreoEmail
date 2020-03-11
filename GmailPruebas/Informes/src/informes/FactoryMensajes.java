@@ -9,8 +9,8 @@ public class FactoryMensajes {
     public static List<EmailsMensage> createListMensaje()
     {
         List<EmailsMensage> listaEmails = new ArrayList<>();
-        listaEmails.add(new EmailsMensage("Prueba1","Bryan",new Date(),"Inbox"));
-        listaEmails.add(new EmailsMensage("Prueba2","Bryan",new Date(),"Borrados"));
+        listaEmails.add(new EmailsMensage("Prueba1","Bryan","Prueba1",new Date(),"Inbox"));
+        listaEmails.add(new EmailsMensage("Prueba2","Bryan","Prueba2",new Date(),"Borrados"));
 
         return listaEmails;
     }

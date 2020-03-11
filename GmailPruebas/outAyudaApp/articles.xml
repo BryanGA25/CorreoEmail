@@ -1,8 +1,11 @@
 <database>
   <article name="primerospasos" url="articles/article_primeraGuia.html" >
   </article>
+  <article name="tecerospasos" url="articles/article_terceraGuia.html" >
+  </article>
   <article name="sengudospasos" url="articles/article_segundaGuia.html" >
   </article>
   <articleID id="primerospasos" />
   <articleID id="sengudospasos" />
+  <articleID id="tecerospasos" />
 </database>

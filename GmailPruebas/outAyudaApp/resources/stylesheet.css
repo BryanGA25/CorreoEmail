@@ -91,16 +91,16 @@ div.top {
    margin-bottom: 10px;
 }
 
+figcaption {
+   font-size: 13px;
+   font-style: italic;
+}​
+
 img.center {
    display: block;
    margin: 0 auto;
    text-align: center; /* only for IE */
 }
-
-figcaption {
-   font-size: 13px;
-   font-style: italic;
-}​
 
 img.left {
    text-align: left;
@@ -233,13 +233,7 @@ figcaption.imageWrapped {
   text-align: center;
 }
 
-table.borderNone, th.borderNone, td.borderNone {
-   border: none;
-   border-collapse: collapse;
-   padding: 10px 10px;
-}
-
-table.border, th.border, td.border {
+table, th, td {
    border: 1px solid black;
    border-collapse: collapse;
    padding: 10px 10px;
@@ -362,17 +356,17 @@ tr.rowAPI:nth-child(even) {
  */
 
 .note {
-   font-size: smaller;
+   font-size: 9px; /* smaller don't work on a Java HTML JEditorPane */
 }
 
 .noteLink {
    text-decoration: none;
-   font-size: smaller;
+   font-size: 9px; /* smaller don't work on a Java HTML JEditorPane */
 }
 
 .noteRefLink {
    text-decoration: none;
-   font-size: smaller;
+   font-size: 9px; /* smaller don't work on a Java HTML JEditorPane */
    vertical-align: super;
 }
 

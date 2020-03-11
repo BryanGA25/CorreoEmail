@@ -11,12 +11,12 @@ public class EmailsMensage {
     private Date fecha;
     private String carpeta;
 
-    public EmailsMensage(String asunto, String remitente, Date fecha,String carpeta) {
+    public EmailsMensage(String asunto, String remitente, String contenido, Date fecha, String carpeta) {
         this.asunto = asunto;
         this.remitente = remitente;
+        this.contenido = contenido;
         this.fecha = fecha;
-        this.carpeta=carpeta;
-
+        this.carpeta = carpeta;
     }
     public String getAsunto() {
         return asunto;
@@ -49,6 +49,16 @@ public class EmailsMensage {
     public void setCarpeta(String carpeta) {
         this.carpeta = carpeta;
     }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
+
 }
 
 

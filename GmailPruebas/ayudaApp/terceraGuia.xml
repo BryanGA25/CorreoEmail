@@ -1,0 +1,13 @@
+<article id="tercerPaso" desc="tecerosPasos">
+    Para la parte de informes, tendremos tres opciones
+
+    <img id="sexta" width="600"/>
+
+    La primera opcion que nos aparece, "Informe unico" nos permite imprimir su un correo que tengamos seleccionado<br/>
+    La segunda opcion "Informe Multiple" nos permite imprimir todos los correos de la carpeta seleccionada<br/>
+    La tercera y ultima opcion "Informes Agrupados" nos sacara todos los informes de una cuenta de correo agurpados por su carpeta<br/>
+
+
+    <cat id="Articulos"/>
+    <cat id="Informes"/>
+</article>
