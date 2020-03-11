@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class loginController extends BaseController implements Initializable{
+public class LoginController extends BaseController implements Initializable{
 
     private String usuario;
     private String contra;

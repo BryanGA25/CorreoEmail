@@ -2,7 +2,6 @@ package Correo.view;
 
 import Correo.logica.Logica;
 import Correo.model.Cuenta;
-
 import Correo.model.EmailTreeItem;
 import Correo.model.EmailsMensage;
 import javafx.application.Application;
@@ -24,13 +23,14 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.docgene.help.JavaHelpFactory;
 import org.docgene.help.gui.jfx.JFXHelpContentViewer;
+
 import javax.mail.internet.MimeMessage;
 import java.io.File;
 import java.net.URL;
 import java.util.*;
 
 
-public class interfazCorreoController extends BaseController implements Initializable {
+public class InterfazCorreoController extends BaseController implements Initializable {
 
     ObservableList<EmailsMensage> listaCorreos;
 
@@ -60,7 +60,7 @@ public class interfazCorreoController extends BaseController implements Initiali
 
         cuentas = Logica.getInstance().getCuentas();
         raiz = Logica.getInstance().getTree();
-        for(Object child: raiz.getChildren()){
+        for (Object child : raiz.getChildren()) {
             expandTreeView((TreeItem<String>) child);
         }
         TreeView.setRoot(raiz);
@@ -71,23 +71,24 @@ public class interfazCorreoController extends BaseController implements Initiali
 
     }
 
-    public void menuAlarmas(){
-        cargarDialogo("alarmas.fxml",600,450).abrirDialogo(true);
+    public void menuAlarmas() {
+        cargarDialogo("alarmas.fxml", 600, 450).abrirDialogo(true);
     }
 
     public void enviar() {
 
         BaseController controller = cargarDialogo("correo.fxml", 800, 600);
-        ((enviarController) controller).sender((EmailTreeItem)TreeView.getSelectionModel().getSelectedItem());
+        ((EnviarController) controller).sender((EmailTreeItem) TreeView.getSelectionModel().getSelectedItem());
         controller.abrirDialogo(true);
 
     }
+
     @FXML
     void generarInformeAgrupado(ActionEvent event) {
 
-        List<EmailsMensage> listaEmails= new ArrayList<>();
+        List<EmailsMensage> listaEmails = new ArrayList<>();
 
-        for(int i=1; i<TreeView.getExpandedItemCount();i++){
+        for (int i = 1; i < TreeView.getExpandedItemCount(); i++) {
             if (TreeView.getTreeItem(i).getValue().equalsIgnoreCase("INBOX")) {
                 listaEmails.addAll(Logica.getInstance().getListaCorreos(TreeView.getTreeItem(i).getValue()));
             } else {
@@ -99,48 +100,45 @@ public class interfazCorreoController extends BaseController implements Initiali
         }
 
 
-
-
-        if (!listaEmails.isEmpty()){
+        if (!listaEmails.isEmpty()) {
             try {
 
                 JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(listaEmails); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
-                Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
+                Map<String, Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
                 JasperPrint print = JasperFillManager.fillReport(String.valueOf(new File("jasper/InformeAgrupado.jasper")), parametros, jr);
                 JasperExportManager.exportReportToPdfFile(print, "InformeAgrupado.pdf");
             } catch (JRException e) {
                 e.printStackTrace();
             }
-        }else {
-            Alert alerta= new Alert(Alert.AlertType.WARNING);
+        } else {
+            Alert alerta = new Alert(Alert.AlertType.WARNING);
             alerta.setContentText("No hay correos para mostrar");
             alerta.showAndWait();
         }
 
 
-
-    //cargarDialogo("informesCuenta.fxml",800,600).abrirDialogo(true);
+        //cargarDialogo("informesCuenta.fxml",800,600).abrirDialogo(true);
 
     }
 
     @FXML
     void generarInformeMultiple(ActionEvent event) {
         List<EmailsMensage> listaEmails = new ArrayList<>();
-        for (EmailsMensage e:tablaCorreos.getItems()) {
+        for (EmailsMensage e : tablaCorreos.getItems()) {
             listaEmails.add(e);
         }
-        if (!listaEmails.isEmpty()){
+        if (!listaEmails.isEmpty()) {
             try {
 
                 JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(listaEmails); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
-                Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
+                Map<String, Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
                 JasperPrint print = JasperFillManager.fillReport(String.valueOf(new File("jasper/CorreoInformes.jasper")), parametros, jr);
                 JasperExportManager.exportReportToPdfFile(print, "InformeMultiple.pdf");
             } catch (JRException e) {
                 e.printStackTrace();
             }
-        }else {
-            Alert alerta= new Alert(Alert.AlertType.WARNING);
+        } else {
+            Alert alerta = new Alert(Alert.AlertType.WARNING);
             alerta.setContentText("No hay datos en la tabla para mostrar");
             alerta.showAndWait();
         }
@@ -148,19 +146,19 @@ public class interfazCorreoController extends BaseController implements Initiali
 
     @FXML
     void generarInformeUnico(ActionEvent event) {
-        if (tablaCorreos.getSelectionModel().isEmpty()!=true){
+        if (tablaCorreos.getSelectionModel().isEmpty() != true) {
             try {
                 List<EmailsMensage> listaEmails = new ArrayList<>();
                 listaEmails.add(tablaCorreos.getSelectionModel().getSelectedItem());
                 JRBeanCollectionDataSource jr = new JRBeanCollectionDataSource(listaEmails); //lista sería la colección a mostrar. Típicamente saldría de la lógica de nuestra aplicación
-                Map<String,Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
+                Map<String, Object> parametros = new HashMap<>(); //En este caso no hay parámetros, aunque podría haberlos
                 JasperPrint print = JasperFillManager.fillReport(String.valueOf(new File("jasper/CorreoInformes.jasper")), parametros, jr);
                 JasperExportManager.exportReportToPdfFile(print, "InformeUnico.pdf");
             } catch (JRException e) {
                 e.printStackTrace();
             }
-        }else {
-            Alert alerta= new Alert(Alert.AlertType.WARNING);
+        } else {
+            Alert alerta = new Alert(Alert.AlertType.WARNING);
             alerta.setContentText("No hay un correo seleccionado");
             alerta.showAndWait();
         }
@@ -172,8 +170,8 @@ public class interfazCorreoController extends BaseController implements Initiali
 
         EmailsMensage mensaje = tablaCorreos.getSelectionModel().getSelectedItem();
         BaseController controller = cargarDialogo("correo.fxml", 800, 600);
-        ((enviarController) controller).sender((EmailTreeItem)TreeView.getSelectionModel().getSelectedItem());
-        ((enviarController) controller).reenviar(mensaje);
+        ((EnviarController) controller).sender((EmailTreeItem) TreeView.getSelectionModel().getSelectedItem());
+        ((EnviarController) controller).reenviar(mensaje);
         controller.abrirDialogo(true);
 
 
@@ -183,8 +181,8 @@ public class interfazCorreoController extends BaseController implements Initiali
 
         EmailsMensage mensaje = tablaCorreos.getSelectionModel().getSelectedItem();
         BaseController controller = cargarDialogo("correo.fxml", 800, 600);
-        ((enviarController)  controller).sender((EmailTreeItem)TreeView.getSelectionModel().getSelectedItem());
-        ((enviarController)   controller).responder(mensaje);
+        ((EnviarController) controller).sender((EmailTreeItem) TreeView.getSelectionModel().getSelectedItem());
+        ((EnviarController) controller).responder(mensaje);
         controller.abrirDialogo(true);
     }
 
@@ -196,14 +194,13 @@ public class interfazCorreoController extends BaseController implements Initiali
     }
 
     @FXML
-    private void verAsuntos(){
+    private void verAsuntos() {
 
         cargarDialogo("asuntos.fxml", 600, 600).abrirDialogo(true);
 
     }
 
-    private void initializeHelp(Stage stage)
-    {
+    private void initializeHelp(Stage stage) {
         try {
             URL url = new File("outAyudaApp/articles.zip").toURI().toURL();
             JavaHelpFactory factory = new JavaHelpFactory(url);
@@ -211,13 +208,13 @@ public class interfazCorreoController extends BaseController implements Initiali
             viewer = new JFXHelpContentViewer();
             factory.install(viewer);
             viewer.getHelpWindow(stage, "Help Content", 600, 700);
-        }catch (Throwable e)
-        {
+        } catch (Throwable e) {
             e.printStackTrace();
         }
     }
+
     @FXML
-    private void iniciarAyuda(){
+    private void iniciarAyuda() {
         viewer.showHelpDialog(ayuda);
     }
 
@@ -260,50 +257,48 @@ public class interfazCorreoController extends BaseController implements Initiali
         });
 
 
+        tablaCorreos.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<EmailsMensage>() {
+            @Override
+            public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
 
-            tablaCorreos.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<EmailsMensage>() {
-                @Override
-                public void changed(ObservableValue<? extends EmailsMensage> observableValue, EmailsMensage emailsMensage, EmailsMensage t1) {
+                String mensaje = t1.getContenido();
+                WebEngine web = vistaEmail.getEngine();
+                web.loadContent(mensaje);
+            }
 
-                    String mensaje = t1.getContenido();
-                    WebEngine web= vistaEmail.getEngine();
-                    web.loadContent(mensaje);
+
+        });
+
+
+        TreeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
+            @Override
+            public void changed(ObservableValue<? extends TreeItem<String>> observableValue, TreeItem<String> stringTreeItem, TreeItem<String> t1) {
+
+
+                if (t1.getValue().equalsIgnoreCase("INBOX")) {
+                    Logica.getInstance().getListaCorreos(t1.getValue());
+                } else {
+                    String carpeta = "[Gmail]/" + t1.getValue();
+                    Logica.getInstance().getListaCorreos(carpeta);
                 }
 
 
-            });
+            }
+
+        });
+
+    }
 
 
-            TreeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
-                @Override
-                public void changed(ObservableValue<? extends TreeItem<String>> observableValue, TreeItem<String> stringTreeItem, TreeItem<String> t1) {
-
-
-                    if (t1.getValue().equalsIgnoreCase("INBOX")) {
-                        Logica.getInstance().getListaCorreos(t1.getValue());
-                    } else {
-                        String carpeta = "[Gmail]/" + t1.getValue();
-                        Logica.getInstance().getListaCorreos(carpeta);
-                    }
-
-
-
-                }
-
-            });
-
-        }
-
-
-    private void expandTreeView(TreeItem<?> item){
-        if(item != null && !item.isLeaf()){
+    private void expandTreeView(TreeItem<?> item) {
+        if (item != null && !item.isLeaf()) {
             item.setExpanded(true);
-            for(TreeItem<?> child:item.getChildren()){
+            for (TreeItem<?> child : item.getChildren()) {
                 expandTreeView(child);
             }
         }
     }
-    }
+}
 
 
 

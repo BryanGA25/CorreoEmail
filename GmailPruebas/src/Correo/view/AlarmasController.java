@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 
-public class alarmasController extends BaseController implements  Initializable{
+public class AlarmasController extends BaseController implements Initializable {
 
     private Reloj reloj;
 
@@ -41,19 +41,18 @@ public class alarmasController extends BaseController implements  Initializable{
     private ObservableList<Tarea> listaTareas;
 
     @FXML
-    private  void añadirTarea(){
+    private void añadirTarea() {
 
-        String alarma=horaAlarma.getText();
+        String alarma = horaAlarma.getText();
 
-        Date date=Date.from(diaAlarma.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
-        int hora=Integer.parseInt(alarma.substring(0,2));
-        int minutos=Integer.parseInt(alarma.substring(3,5));
-        int segundos=Integer.parseInt(alarma.substring(6,8));
-        LocalTime localTime=LocalTime.of(hora,minutos,segundos);
+        Date date = Date.from(diaAlarma.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
+        int hora = Integer.parseInt(alarma.substring(0, 2));
+        int minutos = Integer.parseInt(alarma.substring(3, 5));
+        int segundos = Integer.parseInt(alarma.substring(6, 8));
+        LocalTime localTime = LocalTime.of(hora, minutos, segundos);
 
 
-        Tarea tarea=new Tarea(mensaje.getText(),localTime,date);
-        System.out.println(tarea.getDia().toString());
+        Tarea tarea = new Tarea(mensaje.getText(), localTime, date);
         reloj.nuevaTarea(tarea);
 
         Logica.getInstance().addTarea(tarea);
@@ -65,20 +64,27 @@ public class alarmasController extends BaseController implements  Initializable{
         reloj.setOnTimeArrive(new OnTimeArrive() {
             @Override
             public void añadirTarea(Tarea tarea) {
-                Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setContentText(tarea.getAlerta());
                 alert.show();
+                for (int i=0;i<tablaAlarmas.getItems().size();i++){
+                    if (tablaAlarmas.getItems().get(i).equals(tarea)){
+                        reloj.deleteTarea(i);
+                        Logica.getInstance().borrarTarea(i);
+                    }
+                }
+
             }
         });
     }
 
-    public void cargarTabla(){
+    public void cargarTabla() {
 
-        listaTareas=Logica.getInstance().getListaTareas();
+        listaTareas = Logica.getInstance().getListaTareas();
         tablaAlarmas.setItems(listaTareas);
     }
 
-    public void borrarAlarma(){
+    public void borrarAlarma() {
         listaTareas.remove(listaTareas.get(tablaAlarmas.getSelectionModel().getFocusedIndex()));
         Logica.getInstance().borrarTarea(tablaAlarmas.getSelectionModel().getSelectedIndex());
     }
@@ -87,6 +93,6 @@ public class alarmasController extends BaseController implements  Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cargarTabla();
-        reloj=Logica.getInstance().getReloj();
+        reloj = Logica.getInstance().getReloj();
     }
 }

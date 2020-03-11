@@ -13,7 +13,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class enviarController extends BaseController implements Initializable {
+public class EnviarController extends BaseController implements Initializable {
 
 
     private Cuenta cuenta;

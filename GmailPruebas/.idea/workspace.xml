@@ -2,58 +2,21 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Informes" />
+      <artifact name="GmailPruebas:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ayudaApp/Informes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ayudaApp/informes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ayudaApp/terceraGuia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/GmailPruebas_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/GmailPruebas_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/InformesJasper_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ProyectoReloj.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ProyectoReloj.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="bd902304-c0ab-4fb4-a7fe-5787356e1526" name="Default Changelist" comment="Proyecto">
+      <change afterPath="$PROJECT_DIR$/InstaladorCorreo.nsi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GmailPruebas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GmailPruebas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informes/Informes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Informes/Informes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informes/src/informes/EmailsMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Informes/src/informes/EmailsMensage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informes/src/informes/FactoryMensajes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Informes/src/informes/FactoryMensajes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformesJasper/InformesJasper.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ayudaApp/enviarCorreo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ayudaApp/enviarCorreo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ayudaApp/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ayudaApp/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ayudaApp/primeraGuia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ayudaApp/primeraGuia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ayudaApp/segundaGuia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ayudaApp/segundaGuia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/articles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/articles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/articles/article_primeraGuia.html" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/articles/article_primeraGuia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/articles/article_segundaGuia.html" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/articles/article_segundaGuia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/dictionnary.html" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/dictionnary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/OpenLayers.js" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/OpenLayers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/articles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/AUTHORS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/AUTHORS.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/external/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/external/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.structure.css" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.structure.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.structure.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.structure.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/jquery-ui.theme.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/jquery/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/jquery/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outAyudaApp/resources/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/outAyudaApp/resources/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/logica/Logica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/alarmasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/alarmasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/enviarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/enviarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/jasper/CorreoInformes.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/jasper/CorreoInformes.jasper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/jasper/InformeAgrupado.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/jasper/InformeAgrupado.jasper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Correo/view/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/alarmas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/alarmas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/alarmasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/AlarmasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/correo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/correo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/enviarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/EnviarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/interfazCorreo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/interfazCorreoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/InterfazCorreoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Correo/view/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Correo/view/LoginController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,8 +45,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ayudaApp" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.1472754" />
   </component>
@@ -99,6 +62,7 @@
       <recent name="informes" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas" />
       <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\ayudaApp" />
       <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\src\Correo\view\jasper" />
       <recent name="C:\Users\User\Desktop\NuevoCorreo\GmailPruebas\Informes\src\informes\jasper" />
@@ -372,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583498474112</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Proyecto PreEntrega">
+      <created>1583945866073</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1583945866073</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -413,6 +384,7 @@
     <MESSAGE value="Un poco de help" />
     <MESSAGE value="Arreglo en reloj" />
     <MESSAGE value="Ayuda casi terminada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ayuda casi terminada" />
+    <MESSAGE value="Proyecto PreEntrega" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proyecto PreEntrega" />
   </component>
 </project>
